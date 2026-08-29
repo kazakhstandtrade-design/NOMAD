@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NOMAD — Запланировать путешествие</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/plan.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- PAGE TRANSITION -->
+
+    <div class="page-transition"></div>
+
+
+    <!-- HEADER -->
+
+    <header class="plan-header">
+
+        <div class="plan-container plan-header__inner">
+
+            <a
+                href="index.html"
+                class="plan-logo page-link"
+            >
+                NOMAD
+            </a>
+
+
+            <nav class="plan-navigation">
+
+                <a
+                    href="index.html"
+                    class="page-link"
+                >
+                    Главная
+                </a>
+
+                <a
+                    href="countries.html"
+                    class="page-link"
+                >
+                    Страны
+                </a>
+
+                <a
+                    href="routes.html"
+                    class="page-link"
+                >
+                    Маршруты
+                </a>
+
+                <a
+                    href="contacts.html"
+                    class="page-link"
+                >
+                    Контакты
+                </a>
+
+                <a
+                    href="about.html"
+                    class="page-link"
+                >
+                    О нас
+                </a>
+
+                <a
+                    href="search.html"
+                    class="page-link"
+                >
+                    Поиск
+                </a>
+
+            </nav>
+
+
+            <!-- MOBILE BUTTON -->
+
+            <button
+                class="plan-menu"
+                type="button"
+                aria-label="Открыть меню"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE NAVIGATION -->
+
+        <div class="plan-mobile-navigation">
+
+            <button
+                class="mobile-close"
+                type="button"
+                aria-label="Закрыть меню"
+            >
+                ×
+            </button>
+
+
+            <nav>
+
+                <a
+                    href="index.html"
+                    class="page-link"
+                >
+                    Главная
+                </a>
+
+                <a
+                    href="countries.html"
+                    class="page-link"
+                >
+                    Страны
+                </a>
+
+                <a
+                    href="routes.html"
+                    class="page-link"
+                >
+                    Маршруты
+                </a>
+
+                <a
+                    href="contacts.html"
+                    class="page-link"
+                >
+                    Контакты
+                </a>
+
+                <a
+                    href="about.html"
+                    class="page-link"
+                >
+                    О нас
+                </a>
+
+                <a
+                    href="search.html"
+                    class="page-link"
+                >
+                    Поиск
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- INTRO -->
+
+        <section class="planner-intro">
+
+            <div class="plan-container">
+
+                <div class="planner-intro__top">
+
+                    <span>
+                        YOUR JOURNEY
+                    </span>
+
+                    <span>
+                        01 — 05
+                    </span>
+
+                </div>
+
+
+                <div class="planner-intro__content">
+
+                    <h1>
+                        Plan your
+                        <br>
+                        journey.
+                    </h1>
+
+                    <p>
+                        Ответьте на несколько вопросов,
+                        и NOMAD подберёт путешествия,
+                        которые подходят именно вам.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PLANNER -->
+
+        <section class="planner">
+
+            <div class="plan-container">
+
+
+                <!-- PROGRESS -->
+
+                <div class="planner-progress">
+
+                    <div
+                        class="planner-progress__item active"
+                        data-progress="1"
+                    >
+
+                        <span>01</span>
+
+                        <small>Куда?</small>
+
+                    </div>
+
+
+                    <div class="planner-progress__line"></div>
+
+
+                    <div
+                        class="planner-progress__item"
+                        data-progress="2"
+                    >
+
+                        <span>02</span>
+
+                        <small>Когда?</small>
+
+                    </div>
+
+
+                    <div class="planner-progress__line"></div>
+
+
+                    <div
+                        class="planner-progress__item"
+                        data-progress="3"
+                    >
+
+                        <span>03</span>
+
+                        <small>Дни</small>
+
+                    </div>
+
+
+                    <div class="planner-progress__line"></div>
+
+
+                    <div
+                        class="planner-progress__item"
+                        data-progress="4"
+                    >
+
+                        <span>04</span>
+
+                        <small>Отдых</small>
+
+                    </div>
+
+
+                    <div class="planner-progress__line"></div>
+
+
+                    <div
+                        class="planner-progress__item"
+                        data-progress="5"
+                    >
+
+                        <span>05</span>
+
+                        <small>Бюджет</small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STEP 1 -->
+
+                <div
+                    class="planner-step active"
+                    data-step="1"
+                >
+
+                    <span class="planner-step__label">
+                        STEP 01
+                    </span>
+
+                    <h2>
+                        Куда хотите
+                        отправиться?
+                    </h2>
+
+                    <p class="planner-step__description">
+                        Выберите направление.
+                    </p>
+
+
+                    <!-- COUNTRY SEARCH -->
+
+                    <div class="country-search">
+
+                        <span class="search-icon">
+                            /
+                        </span>
+
+                        <input
+                            type="text"
+                            id="countrySearch"
+                            placeholder="Найти страну..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <!-- COUNTRIES -->
+
+                    <div
+                        class="destination-grid"
+                        id="destinationGrid"
+                    >
+
+
+                        <button
+                            type="button"
+                            class="destination-card"
+                            data-destination="Italy"
+                        >
+
+                            <img
+                                src="https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=1000&q=85"
+                                alt="Италия"
+                            >
+
+                            <span>Italy</span>
+
+                            <i>+</i>
+
+                        </button>
+
+
+
+                        <button
+                            type="button"
+                            class="destination-card"
+                            data-destination="Japan"
+                        >
+
+                            <img
+                                src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1000&q=85"
+                                alt="Япония"
+                            >
+
+                            <span>Japan</span>
+
+                            <i>+</i>
+
+                        </button>
+
+
+
+                        <button
+                            type="button"
+                            class="destination-card"
+                            data-destination="Iceland"
+                        >
+
+                            <img
+                                src="https://images.unsplash.com/photo-1504829857797-ddff29c27927?auto=format&fit=crop&w=1000&q=85"
+                                alt="Исландия"
+                            >
+
+                            <span>Iceland</span>
+
+                            <i>+</i>
+
+                        </button>
+
+
+
+                        <button
+                            type="button"
+                            class="destination-card"
+                            data-destination="France"
+                        >
+
+                            <img
+                                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1000&q=85"
+                                alt="Франция"
+                            >
+
+                            <span>France</span>
+
+                            <i>+</i>
+
+                        </button>
+
+
+
+                        <button
+                            type="button"
+                            class="destination-card"
+                            data-destination="Spain"
+                        >
+
+                            <img
+                                src="https://images.unsplash.com/photo-1509840841025-9088ba78a826?auto=format&fit=crop&w=1000&q=85"
+                                alt="Испания"
+                            >
+
+                            <span>Spain</span>
+
+                            <i>+</i>
+
+                        </button>
+
+
+
+                        <button
+                            type="button"
+                            class="destination-card"
+                            data-destination="Norway"
+                        >
+
+                            <img
+                                src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85"
+                                alt="Норвегия"
+                            >
+
+                            <span>Norway</span>
+
+                            <i>+</i>
+
+                        </button>
+
+
+
+                        <button
+                            type="button"
+                            class="destination-card"
+                            data-destination="Portugal"
+                        >
+
+                            <img
+                                src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=1000&q=85"
+                                alt="Португалия"
+                            >
+
+                            <span>Portugal</span>
+
+                            <i>+</i>
+
+                        </button>
+
+
+
+                        <button
+                            type="button"
+                            class="destination-card"
+                            data-destination="Thailand"
+                        >
+
+                            <img
+                                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85"
+                                alt="Таиланд"
+                            >
+
+                            <span>Thailand</span>
+
+                            <i>+</i>
+
+                        </button>
+
+
+
+                        <button
+                            type="button"
+                            class="destination-card"
+                            data-destination="Greece"
+                        >
+
+                            <img
+                                src="https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?auto=format&fit=crop&w=1000&q=85"
+                                alt="Греция"
+                            >
+
+                            <span>Greece</span>
+
+                            <i>+</i>
+
+                        </button>
+
+
+
+                        <button
+                            type="button"
+                            class="destination-card"
+                            data-destination="Switzerland"
+                        >
+
+                            <img
+                                src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1000&q=85"
+                                alt="Швейцария"
+                            >
+
+                            <span>Switzerland</span>
+
+                            <i>+</i>
+
+                        </button>
+
+
+
+                        <button
+                            type="button"
+                            class="destination-card"
+                            data-destination="Indonesia"
+                        >
+
+                            <img
+                                src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1000&q=85"
+                                alt="Индонезия"
+                            >
+
+                            <span>Indonesia</span>
+
+                            <i>+</i>
+
+                        </button>
+
+
+
+                        <button
+                            type="button"
+                            class="destination-card"
+                            data-destination="Morocco"
+                        >
+
+                            <img
+                                src="https://images.unsplash.com/photo-1489493585363-d69421e0edd3?auto=format&fit=crop&w=1000&q=85"
+                                alt="Марокко"
+                            >
+
+                            <span>Morocco</span>
+
+                            <i>+</i>
+
+                        </button>
+
+                    </div>
+
+
+                    <p
+                        class="no-countries"
+                        id="noCountries"
+                    >
+                        Страна не найдена.
+                    </p>
+
+
+                    <div class="planner-actions">
+
+                        <button
+                            class="planner-next"
+                            type="button"
+                        >
+                            Далее
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STEP 2 -->
+
+                <div
+                    class="planner-step"
+                    data-step="2"
+                >
+
+                    <span class="planner-step__label">
+                        STEP 02
+                    </span>
+
+                    <h2>
+                        Когда хотите
+                        путешествовать?
+                    </h2>
+
+                    <p class="planner-step__description">
+                        Выберите месяц поездки.
+                    </p>
+
+
+                    <div class="month-grid">
+
+                        <button class="option-card" data-month="January">
+                            Январь
+                        </button>
+
+                        <button class="option-card" data-month="February">
+                            Февраль
+                        </button>
+
+                        <button class="option-card" data-month="March">
+                            Март
+                        </button>
+
+                        <button class="option-card" data-month="April">
+                            Апрель
+                        </button>
+
+                        <button class="option-card" data-month="May">
+                            Май
+                        </button>
+
+                        <button class="option-card" data-month="June">
+                            Июнь
+                        </button>
+
+                        <button class="option-card" data-month="July">
+                            Июль
+                        </button>
+
+                        <button class="option-card" data-month="August">
+                            Август
+                        </button>
+
+                        <button class="option-card" data-month="September">
+                            Сентябрь
+                        </button>
+
+                        <button class="option-card" data-month="October">
+                            Октябрь
+                        </button>
+
+                        <button class="option-card" data-month="November">
+                            Ноябрь
+                        </button>
+
+                        <button class="option-card" data-month="December">
+                            Декабрь
+                        </button>
+
+                    </div>
+
+
+                    <div class="planner-actions">
+
+                        <button
+                            class="planner-back"
+                            type="button"
+                        >
+                            ← Назад
+                        </button>
+
+                        <button
+                            class="planner-next"
+                            type="button"
+                        >
+                            Далее
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STEP 3 -->
+
+                <div
+                    class="planner-step"
+                    data-step="3"
+                >
+
+                    <span class="planner-step__label">
+                        STEP 03
+                    </span>
+
+                    <h2>
+                        На сколько дней?
+                    </h2>
+
+                    <p class="planner-step__description">
+                        Выберите продолжительность путешествия.
+                    </p>
+
+
+                    <div class="duration-grid">
+
+                        <button
+                            class="option-card"
+                            data-duration="3-5"
+                        >
+
+                            <strong>3–5</strong>
+
+                            <span>дней</span>
+
+                        </button>
+
+
+                        <button
+                            class="option-card"
+                            data-duration="6-9"
+                        >
+
+                            <strong>6–9</strong>
+
+                            <span>дней</span>
+
+                        </button>
+
+
+                        <button
+                            class="option-card"
+                            data-duration="10-14"
+                        >
+
+                            <strong>10–14</strong>
+
+                            <span>дней</span>
+
+                        </button>
+
+
+                        <button
+                            class="option-card"
+                            data-duration="15+"
+                        >
+
+                            <strong>15+</strong>
+
+                            <span>дней</span>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="planner-actions">
+
+                        <button
+                            class="planner-back"
+                            type="button"
+                        >
+                            ← Назад
+                        </button>
+
+                        <button
+                            class="planner-next"
+                            type="button"
+                        >
+                            Далее
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STEP 4 -->
+
+                <div
+                    class="planner-step"
+                    data-step="4"
+                >
+
+                    <span class="planner-step__label">
+                        STEP 04
+                    </span>
+
+                    <h2>
+                        Какой вид отдыха
+                        вам подходит?
+                    </h2>
+
+                    <p class="planner-step__description">
+                        Выберите атмосферу своего путешествия.
+                    </p>
+
+
+                    <div class="travel-type-grid">
+
+
+                        <button
+                            class="travel-type-card"
+                            data-type="adventure"
+                        >
+
+                            <span class="type-number">
+                                01
+                            </span>
+
+                            <strong>
+                                Приключения
+                            </strong>
+
+                            <p>
+                                Горы, дороги, природа
+                                и новые впечатления.
+                            </p>
+
+                            <i>↗</i>
+
+                        </button>
+
+
+
+                        <button
+                            class="travel-type-card"
+                            data-type="beach"
+                        >
+
+                            <span class="type-number">
+                                02
+                            </span>
+
+                            <strong>
+                                Пляж
+                            </strong>
+
+                            <p>
+                                Тёплое море, солнце
+                                и спокойный ритм.
+                            </p>
+
+                            <i>↗</i>
+
+                        </button>
+
+
+
+                        <button
+                            class="travel-type-card"
+                            data-type="city"
+                        >
+
+                            <span class="type-number">
+                                03
+                            </span>
+
+                            <strong>
+                                Город
+                            </strong>
+
+                            <p>
+                                Архитектура, культура,
+                                рестораны и улицы.
+                            </p>
+
+                            <i>↗</i>
+
+                        </button>
+
+
+
+                        <button
+                            class="travel-type-card"
+                            data-type="aesthetic"
+                        >
+
+                            <span class="type-number">
+                                04
+                            </span>
+
+                            <strong>
+                                Эстетичные места
+                            </strong>
+
+                            <p>
+                                Красивые локации,
+                                атмосфера и slow travel.
+                            </p>
+
+                            <i>↗</i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="planner-actions">
+
+                        <button
+                            class="planner-back"
+                            type="button"
+                        >
+                            ← Назад
+                        </button>
+
+                        <button
+                            class="planner-next"
+                            type="button"
+                        >
+                            Далее
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STEP 5 -->
+
+                <div
+                    class="planner-step"
+                    data-step="5"
+                >
+
+                    <span class="planner-step__label">
+                        STEP 05
+                    </span>
+
+                    <h2>
+                        Какой у вас
+                        бюджет?
+                    </h2>
+
+                    <p class="planner-step__description">
+                        Выберите диапазон на одного человека.
+                    </p>
+
+
+                    <div class="budget-grid">
+
+
+                        <button
+                            class="budget-card"
+                            data-budget-min="500"
+                            data-budget-max="1000"
+                        >
+
+                            <strong>
+                                $500
+                            </strong>
+
+                            <span>
+                                — $1,000
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            class="budget-card"
+                            data-budget-min="1000"
+                            data-budget-max="1500"
+                        >
+
+                            <strong>
+                                $1,000
+                            </strong>
+
+                            <span>
+                                — $1,500
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            class="budget-card"
+                            data-budget-min="1500"
+                            data-budget-max="2000"
+                        >
+
+                            <strong>
+                                $1,500
+                            </strong>
+
+                            <span>
+                                — $2,000
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            class="budget-card"
+                            data-budget-min="2000"
+                            data-budget-max="3000"
+                        >
+
+                            <strong>
+                                $2,000
+                            </strong>
+
+                            <span>
+                                — $3,000
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            class="budget-card"
+                            data-budget-min="3000"
+                            data-budget-max="5000"
+                        >
+
+                            <strong>
+                                $3,000
+                            </strong>
+
+                            <span>
+                                — $5,000
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            class="budget-card"
+                            data-budget-min="5000"
+                            data-budget-max="999999"
+                        >
+
+                            <strong>
+                                $5,000
+                            </strong>
+
+                            <span>
+                                +
+                            </span>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="planner-actions">
+
+                        <button
+                            class="planner-back"
+                            type="button"
+                        >
+                            ← Назад
+                        </button>
+
+                        <button
+                            class="planner-submit"
+                            type="button"
+                        >
+                            Подобрать путешествия
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RESULTS -->
+
+                <section
+                    class="planner-results"
+                    id="plannerResults"
+                >
+
+                    <div class="results-heading">
+
+                        <span>
+                            YOUR MATCHES
+                        </span>
+
+                        <h2>
+                            Путешествия,
+                            созданные для вас.
+                        </h2>
+
+                        <p id="resultsDescription"></p>
+
+                    </div>
+
+
+                    <div
+                        class="results-grid"
+                        id="resultsGrid"
+                    ></div>
+
+
+                    <button
+                        class="planner-restart"
+                        type="button"
+                    >
+                        ← Изменить параметры
+                    </button>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="plan-footer">
+
+        <div class="plan-container">
+
+            <div class="plan-footer__top">
+
+
+                <div>
+
+                    <a
+                        href="index.html"
+                        class="plan-logo page-link"
+                    >
+                        NOMAD
+                    </a>
+
+                    <p>
+                        Откройте свой следующий маршрут.
+                    </p>
+
+                </div>
+
+
+                <div class="plan-footer__links">
+
+
+                    <div>
+
+                        <span>
+                            Навигация
+                        </span>
+
+                        <a
+                            href="index.html"
+                            class="page-link"
+                        >
+                            Главная
+                        </a>
+
+                        <a
+                            href="countries.html"
+                            class="page-link"
+                        >
+                            Страны
+                        </a>
+
+                        <a
+                            href="routes.html"
+                            class="page-link"
+                        >
+                            Маршруты
+                        </a>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Компания
+                        </span>
+
+                        <a
+                            href="about.html"
+                            class="page-link"
+                        >
+                            О нас
+                        </a>
+
+                        <a
+                            href="contacts.html"
+                            class="page-link"
+                        >
+                            Контакты
+                        </a>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Социальные сети
+                        </span>
+
+                        <a href="#">
+                            Instagram
+                        </a>
+
+                        <a href="#">
+                            Telegram
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="plan-footer__bottom">
+
+                <span>
+                    © 2026 NOMAD
+                </span>
+
+                <span>
+                    Travel differently.
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="js/plan.js"></script>
+
+</body>
+
+</html>
