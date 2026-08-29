@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="NOMAD — создайте своё путешествие и найдите подходящий маршрут."
+    >
+
+    <title>NOMAD — Plan your journey</title>
+
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/plan.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="header">
+
+        <div class="container header__inner">
+
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                NOMAD
+            </a>
+
+
+            <nav class="navigation">
+
+                <a
+                    href="index.html"
+                    class="navigation__link"
+                >
+                    Главная
+                </a>
+
+                <a
+                    href="countries.html"
+                    class="navigation__link"
+                >
+                    Страны
+                </a>
+
+                <a
+                    href="routes.html"
+                    class="navigation__link"
+                >
+                    Маршруты
+                </a>
+
+                <a
+                    href="contacts.html"
+                    class="navigation__link"
+                >
+                    Контакты
+                </a>
+
+                <a
+                    href="about.html"
+                    class="navigation__link"
+                >
+                    О нас
+                </a>
+
+                <a
+                    href="search.html"
+                    class="navigation__search"
+                >
+                    <span class="search-icon"></span>
+                    Поиск
+                </a>
+
+            </nav>
+
+
+            <button
+                class="menu-button"
+                type="button"
+                aria-label="Открыть меню"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+
+        <div class="mobile-navigation">
+
+            <a href="index.html">
+                Главная
+            </a>
+
+            <a href="countries.html">
+                Страны
+            </a>
+
+            <a href="routes.html">
+                Маршруты
+            </a>
+
+            <a href="contacts.html">
+                Контакты
+            </a>
+
+            <a href="about.html">
+                О нас
+            </a>
+
+            <a href="search.html">
+                Поиск
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- =========================================
+             HERO / INTRO
+        ========================================== -->
+
+        <section class="plan-hero">
+
+            <div class="container">
+
+                <div class="plan-hero__top">
+
+                    <span class="section-label">
+                        YOUR JOURNEY
+                    </span>
+
+                    <span class="plan-hero__number">
+                        01 / 03
+                    </span>
+
+                </div>
+
+
+                <div class="plan-hero__content">
+
+                    <h1>
+                        Plan your
+                        <br>
+                        journey.
+                    </h1>
+
+                    <p>
+                        Выберите направление, даты,
+                        продолжительность и стиль отдыха.
+                        Мы подберём путешествие,
+                        которое подойдёт именно вам.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             FILTER
+        ========================================== -->
+
+        <section class="planner">
+
+            <div class="container">
+
+
+                <div class="planner__header">
+
+                    <span class="section-label">
+                        FIND YOUR JOURNEY
+                    </span>
+
+                    <h2>
+                        Tell us what
+                        <br>
+                        you're looking for.
+                    </h2>
+
+                </div>
+
+
+
+                <form
+                    class="planner-form"
+                    id="plannerForm"
+                >
+
+
+                    <!-- WHERE -->
+
+                    <div class="form-field">
+
+                        <label for="destination">
+                            КУДА?
+                        </label>
+
+                        <select id="destination">
+
+                            <option value="all">
+                                Anywhere
+                            </option>
+
+                            <option value="italy">
+                                Italy
+                            </option>
+
+                            <option value="france">
+                                France
+                            </option>
+
+                            <option value="japan">
+                                Japan
+                            </option>
+
+                            <option value="iceland">
+                                Iceland
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- WHEN -->
+
+                    <div class="form-field">
+
+                        <label for="date">
+                            КОГДА?
+                        </label>
+
+                        <input
+                            type="date"
+                            id="date"
+                        >
+
+                    </div>
+
+
+
+                    <!-- DAYS -->
+
+                    <div class="form-field">
+
+                        <label for="duration">
+                            НА СКОЛЬКО ДНЕЙ?
+                        </label>
+
+                        <select id="duration">
+
+                            <option value="all">
+                                Any duration
+                            </option>
+
+                            <option value="short">
+                                1–5 days
+                            </option>
+
+                            <option value="medium">
+                                6–8 days
+                            </option>
+
+                            <option value="long">
+                                9+ days
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- BUDGET -->
+
+                    <div class="form-field">
+
+                        <label for="budget">
+                            БЮДЖЕТ
+                        </label>
+
+                        <select id="budget">
+
+                            <option value="all">
+                                Any budget
+                            </option>
+
+                            <option value="low">
+                                Up to $1,000
+                            </option>
+
+                            <option value="medium">
+                                $1,000–$1,500
+                            </option>
+
+                            <option value="high">
+                                $1,500+
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- STYLE -->
+
+                    <div class="form-field">
+
+                        <label for="style">
+                            ВИД ОТДЫХА
+                        </label>
+
+                        <select id="style">
+
+                            <option value="all">
+                                Any style
+                            </option>
+
+                            <option value="culture">
+                                Culture
+                            </option>
+
+                            <option value="nature">
+                                Nature
+                            </option>
+
+                            <option value="beach">
+                                Beach
+                            </option>
+
+                            <option value="adventure">
+                                Adventure
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <button
+                        class="planner-form__button"
+                        type="submit"
+                    >
+
+                        Find journeys
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             RESULTS
+        ========================================== -->
+
+        <section
+            class="results"
+            id="results"
+        >
+
+            <div class="container">
+
+
+                <div class="results__top">
+
+                    <div>
+
+                        <span class="section-label">
+                            YOUR MATCH
+                        </span>
+
+                        <h2>
+                            Selected journeys
+                        </h2>
+
+                    </div>
+
+                    <span
+                        class="results-count"
+                        id="resultsCount"
+                    >
+                        4 journeys
+                    </span>
+
+                </div>
+
+
+
+                <div
+                    class="journeys-list"
+                    id="journeysList"
+                >
+
+
+                    <!-- =================================
+                         AMALFI
+                    ================================== -->
+
+                    <article
+                        class="journey"
+                        data-country="italy"
+                        data-duration="medium"
+                        data-budget="medium"
+                        data-style="beach"
+                    >
+
+                        <div class="journey__image">
+
+                            <img
+                                src="italy.jpg"
+                                alt="Amalfi Coast, Italy"
+                            >
+
+                            <span class="journey__number">
+                                01
+                            </span>
+
+                        </div>
+
+
+                        <div class="journey__content">
+
+                            <div class="journey__heading">
+
+                                <div>
+
+                                    <span class="journey__country">
+                                        Italy • 7 days
+                                    </span>
+
+                                    <h3>
+                                        AMALFI COAST
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <p class="journey__description">
+                                A week between Mediterranean
+                                villages, hidden beaches and
+                                Italian cuisine.
+                            </p>
+
+
+                            <div class="journey__bottom">
+
+                                <strong>
+                                    $1,290
+                                    <small>/ person</small>
+                                </strong>
+
+                                <button
+                                    class="journey__link"
+                                    type="button"
+                                    data-journey="amalfi"
+                                >
+                                    View journey
+                                    <span>→</span>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================
+                         PARIS
+                    ================================== -->
+
+                    <article
+                        class="journey"
+                        data-country="france"
+                        data-duration="short"
+                        data-budget="medium"
+                        data-style="culture"
+                    >
+
+                        <div class="journey__image">
+
+                            <img
+                                src="france.jpg"
+                                alt="Paris, France"
+                            >
+
+                            <span class="journey__number">
+                                02
+                            </span>
+
+                        </div>
+
+
+                        <div class="journey__content">
+
+                            <div class="journey__heading">
+
+                                <div>
+
+                                    <span class="journey__country">
+                                        France • 5 days
+                                    </span>
+
+                                    <h3>
+                                        PARIS ESCAPE
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <p class="journey__description">
+                                Five days of Parisian streets,
+                                art, architecture and slow mornings
+                                in local cafés.
+                            </p>
+
+
+                            <div class="journey__bottom">
+
+                                <strong>
+                                    $980
+                                    <small>/ person</small>
+                                </strong>
+
+                                <button
+                                    class="journey__link"
+                                    type="button"
+                                    data-journey="paris"
+                                >
+                                    View journey
+                                    <span>→</span>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================
+                         JAPAN
+                    ================================== -->
+
+                    <article
+                        class="journey"
+                        data-country="japan"
+                        data-duration="long"
+                        data-budget="high"
+                        data-style="culture"
+                    >
+
+                        <div class="journey__image">
+
+                            <img
+                                src="japan.jpg"
+                                alt="Japan"
+                            >
+
+                            <span class="journey__number">
+                                03
+                            </span>
+
+                        </div>
+
+
+                        <div class="journey__content">
+
+                            <div class="journey__heading">
+
+                                <div>
+
+                                    <span class="journey__country">
+                                        Japan • 10 days
+                                    </span>
+
+                                    <h3>
+                                        TOKYO TO KYOTO
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <p class="journey__description">
+                                From Tokyo's neon nights to
+                                Kyoto's quiet temples and
+                                traditional streets.
+                            </p>
+
+
+                            <div class="journey__bottom">
+
+                                <strong>
+                                    $1,890
+                                    <small>/ person</small>
+                                </strong>
+
+                                <button
+                                    class="journey__link"
+                                    type="button"
+                                    data-journey="japan"
+                                >
+                                    View journey
+                                    <span>→</span>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================
+                         ICELAND
+                    ================================== -->
+
+                    <article
+                        class="journey"
+                        data-country="iceland"
+                        data-duration="medium"
+                        data-budget="high"
+                        data-style="nature"
+                    >
+
+                        <div class="journey__image">
+
+                            <img
+                                src="iceland.jpg"
+                                alt="Iceland"
+                            >
+
+                            <span class="journey__number">
+                                04
+                            </span>
+
+                        </div>
+
+
+                        <div class="journey__content">
+
+                            <div class="journey__heading">
+
+                                <div>
+
+                                    <span class="journey__country">
+                                        Iceland • 7 days
+                                    </span>
+
+                                    <h3>
+                                        ICELAND NORTH
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <p class="journey__description">
+                                Waterfalls, black beaches,
+                                volcanic landscapes and
+                                endless northern skies.
+                            </p>
+
+
+                            <div class="journey__bottom">
+
+                                <strong>
+                                    $1,540
+                                    <small>/ person</small>
+                                </strong>
+
+                                <button
+                                    class="journey__link"
+                                    type="button"
+                                    data-journey="iceland"
+                                >
+                                    View journey
+                                    <span>→</span>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+
+                <!-- NO RESULTS -->
+
+                <div
+                    class="no-results"
+                    id="noResults"
+                >
+
+                    <h3>
+                        Nothing found.
+                    </h3>
+
+                    <p>
+                        Попробуйте изменить параметры
+                        поиска.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             JOURNEY DETAILS
+        ========================================== -->
+
+        <section
+            class="journey-details"
+            id="journeyDetails"
+        >
+
+            <div class="container">
+
+
+                <button
+                    class="details-close"
+                    id="detailsClose"
+                    type="button"
+                >
+                    ← Back to journeys
+                </button>
+
+
+
+                <div class="details__hero">
+
+
+                    <div class="details__image">
+
+                        <img
+                            id="detailsImage"
+                            src="italy.jpg"
+                            alt="Journey"
+                        >
+
+                    </div>
+
+
+                    <div class="details__intro">
+
+                        <span
+                            class="section-label"
+                            id="detailsCountry"
+                        >
+                            ITALY • 7 DAYS
+                        </span>
+
+
+                        <h2 id="detailsTitle">
+                            AMALFI COAST
+                        </h2>
+
+
+                        <p id="detailsDescription">
+                            A week between Mediterranean
+                            villages, hidden beaches and
+                            Italian cuisine.
+                        </p>
+
+
+                        <div class="details__price">
+
+                            <strong id="detailsPrice">
+                                $1,290
+                            </strong>
+
+                            <span>
+                                / person
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            class="book-button"
+                            type="button"
+                            id="bookButton"
+                        >
+
+                            Book this journey
+
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ITINERARY -->
+
+                <div class="details__section">
+
+                    <div class="details__section-title">
+
+                        <span class="section-label">
+                            THE JOURNEY
+                        </span>
+
+                        <h3>
+                            Your week
+                        </h3>
+
+                    </div>
+
+
+                    <div
+                        class="itinerary"
+                        id="itinerary"
+                    >
+
+                        <!-- JS -->
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- INCLUDED -->
+
+                <div class="included-grid">
+
+
+                    <div class="included-block">
+
+                        <span class="section-label">
+                            WHAT'S INCLUDED
+                        </span>
+
+                        <ul id="includedList">
+
+                            <li>
+                                <span>✓</span>
+                                Hotels
+                            </li>
+
+                            <li>
+                                <span>✓</span>
+                                Airport transfer
+                            </li>
+
+                            <li>
+                                <span>✓</span>
+                                Local guide
+                            </li>
+
+                            <li>
+                                <span>✓</span>
+                                Breakfast
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+
+                    <div class="included-block">
+
+                        <span class="section-label">
+                            NOT INCLUDED
+                        </span>
+
+                        <ul>
+
+                            <li>
+                                <span>×</span>
+                                Flights
+                            </li>
+
+                            <li>
+                                <span>×</span>
+                                Personal expenses
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             FINAL CTA
+        ========================================== -->
+
+        <section class="final-cta">
+
+            <div class="container">
+
+                <div class="final-cta__box">
+
+                    <span class="section-label">
+                        STILL NOT SURE?
+                    </span>
+
+
+                    <h2>
+                        Don't know
+                        <br>
+                        where to go?
+                    </h2>
+
+
+                    <p>
+                        Let us choose
+                        <br>
+                        for you.
+                    </p>
+
+
+                    <button
+                        class="cta-button"
+                        type="button"
+                        id="surpriseButton"
+                    >
+
+                        Surprise me
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+
+            <div class="footer__top">
+
+
+                <div class="footer__brand">
+
+                    <a
+                        href="index.html"
+                        class="logo"
+                    >
+                        NOMAD
+                    </a>
+
+                    <p>
+                        Откройте свой следующий маршрут.
+                    </p>
+
+                </div>
+
+
+                <div class="footer__links">
+
+
+                    <div class="footer__column">
+
+                        <span>
+                            Навигация
+                        </span>
+
+                        <a href="index.html">
+                            Главная
+                        </a>
+
+                        <a href="countries.html">
+                            Страны
+                        </a>
+
+                        <a href="routes.html">
+                            Маршруты
+                        </a>
+
+                        <a href="plan.html">
+                            Планирование
+                        </a>
+
+                    </div>
+
+
+                    <div class="footer__column">
+
+                        <span>
+                            Компания
+                        </span>
+
+                        <a href="about.html">
+                            О нас
+                        </a>
+
+                        <a href="contacts.html">
+                            Контакты
+                        </a>
+
+                    </div>
+
+
+                    <div class="footer__column">
+
+                        <span>
+                            Социальные сети
+                        </span>
+
+                        <a href="#">
+                            Instagram
+                        </a>
+
+                        <a href="#">
+                            Telegram
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="footer__bottom">
+
+                <span>
+                    © 2026 NOMAD
+                </span>
+
+                <span>
+                    Travel differently.
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="js/plan.js"></script>
+
+</body>
+
+</html>
