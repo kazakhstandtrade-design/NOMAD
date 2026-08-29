@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="NOMAD — готовые маршруты для путешествий."
+    >
+
+    <title>NOMAD — Маршруты</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/routes.css"
+    >
+
+</head>
+
+
+<body>
+
+<header class="header">
+
+    <div class="container header__inner">
+
+        <a href="index.html" class="logo">
+            NOMAD
+        </a>
+
+        <nav class="navigation">
+
+            <a href="index.html">Главная</a>
+
+            <a href="countries.html">Страны</a>
+
+            <a href="routes.html" class="active">Маршруты</a>
+
+            <a href="contacts.html">Контакты</a>
+
+            <a href="about.html">О нас</a>
+
+            <a
+                href="search.html"
+                class="navigation__search"
+            >
+                <span class="search-icon"></span>
+                Поиск
+            </a>
+
+        </nav>
+
+
+        <button
+            class="menu-button"
+            type="button"
+            aria-label="Открыть меню"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+
+    <div class="mobile-navigation">
+
+        <a href="index.html">Главная</a>
+
+        <a href="countries.html">Страны</a>
+
+        <a href="routes.html">Маршруты</a>
+
+        <a href="contacts.html">Контакты</a>
+
+        <a href="about.html">О нас</a>
+
+        <a href="search.html">Поиск</a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<section class="routes-hero">
+
+    <div class="container">
+
+        <span class="section-label">
+            NOMAD / ROUTES
+        </span>
+
+        <h1>
+            Find your<br>
+            next journey.
+        </h1>
+
+        <p>
+            Готовые маршруты для тех, кто хочет
+            путешествовать красиво, осознанно и по-своему.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<section class="routes">
+
+    <div class="container">
+
+
+        <div class="routes-top">
+
+            <div>
+
+                <span class="section-label">
+                    EXPLORE
+                </span>
+
+                <h2>
+                    Curated routes
+                </h2>
+
+            </div>
+
+
+            <div class="filters">
+
+                <button
+                    class="filter active"
+                    data-filter="all"
+                >
+                    Все
+                </button>
+
+                <button
+                    class="filter"
+                    data-filter="nature"
+                >
+                    Природа
+                </button>
+
+                <button
+                    class="filter"
+                    data-filter="city"
+                >
+                    Города
+                </button>
+
+                <button
+                    class="filter"
+                    data-filter="beach"
+                >
+                    Пляж
+                </button>
+
+                <button
+                    class="filter"
+                    data-filter="culture"
+                >
+                    Культура
+                </button>
+
+                <button
+                    class="filter"
+                    data-filter="adventure"
+                >
+                    Приключения
+                </button>
+
+                <button
+                    class="filter"
+                    data-filter="food"
+                >
+                    Гастрономия
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="routes-grid"
+            id="routesGrid"
+        ></div>
+
+    </div>
+
+</section>
+
+
+<section class="routes-cta">
+
+    <div class="container">
+
+        <span class="section-label">
+            NOT SURE?
+        </span>
+
+        <h2>
+            Let NOMAD<br>
+            plan it for you.
+        </h2>
+
+        <a
+            href="plan.html"
+            class="cta-button"
+        >
+            Планировать путешествие
+            <span>→</span>
+        </a>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- MODAL -->
+
+<div
+    class="route-modal"
+    id="routeModal"
+    aria-hidden="true"
+>
+
+    <div
+        class="route-modal__background"
+        id="modalBackground"
+    ></div>
+
+    <div class="route-modal__overlay"></div>
+
+
+    <button
+        class="route-modal__close"
+        id="modalClose"
+        type="button"
+        aria-label="Закрыть"
+    >
+        <span></span>
+        <span></span>
+    </button>
+
+
+    <div class="route-modal__content">
+
+        <div class="modal-header">
+
+            <div>
+
+                <span
+                    class="modal-country"
+                    id="modalCountry"
+                >
+                    Switzerland
+                </span>
+
+                <span
+                    class="modal-category"
+                    id="modalCategory"
+                >
+                    NATURE
+                </span>
+
+            </div>
+
+            <span
+                class="modal-number"
+                id="modalNumber"
+            >
+                01
+            </span>
+
+        </div>
+
+
+        <div class="modal-body">
+
+            <span class="modal-label">
+                NOMAD ROUTE
+            </span>
+
+            <h2 id="modalTitle">
+                ALPINE SWITZERLAND
+            </h2>
+
+            <p
+                class="modal-description"
+                id="modalDescription"
+            ></p>
+
+
+            <div class="modal-info">
+
+                <div>
+
+                    <span>
+                        ROUTE
+                    </span>
+
+                    <strong id="modalRoute"></strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        DURATION
+                    </span>
+
+                    <strong id="modalDays"></strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        FROM
+                    </span>
+
+                    <strong id="modalPrice"></strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-itinerary">
+
+                <h3>
+                    Itinerary
+                </h3>
+
+                <div id="modalItinerary"></div>
+
+            </div>
+
+
+            <button
+                class="modal-plan-button"
+                id="modalPlanButton"
+            >
+                Планировать путешествие
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer__top">
+
+            <div>
+
+                <a
+                    href="index.html"
+                    class="logo"
+                >
+                    NOMAD
+                </a>
+
+                <p>
+                    Откройте свой следующий маршрут.
+                </p>
+
+            </div>
+
+
+            <div class="footer__links">
+
+                <div>
+
+                    <span>
+                        Навигация
+                    </span>
+
+                    <a href="index.html">
+                        Главная
+                    </a>
+
+                    <a href="countries.html">
+                        Страны
+                    </a>
+
+                    <a href="routes.html">
+                        Маршруты
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Компания
+                    </span>
+
+                    <a href="about.html">
+                        О нас
+                    </a>
+
+                    <a href="contacts.html">
+                        Контакты
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer__bottom">
+
+            <span>
+                © 2026 NOMAD
+            </span>
+
+            <span>
+                Travel differently.
+            </span>
+
+            <span>
+                Travel differently.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/routes.js"></script>
+
+</body>
+
+</html>
