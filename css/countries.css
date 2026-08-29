@@ -1,0 +1,1538 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Manrope", sans-serif;
+
+    background: #f5f5f3;
+
+    color: #111111;
+
+    line-height: 1.5;
+
+    overflow-x: hidden;
+}
+
+
+body.menu-open {
+    overflow: hidden;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+
+    --black: #111111;
+
+    --white: #ffffff;
+
+    --gray: #777777;
+
+    --background: #f5f5f3;
+
+    --border: #ddddda;
+
+    --transition: 0.35s ease;
+
+    --container: 1320px;
+}
+
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+
+    width:
+        min(
+            calc(100% - 80px),
+            var(--container)
+        );
+
+    margin: 0 auto;
+}
+
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    z-index: 100;
+
+    width: 100%;
+
+    color: white;
+}
+
+
+.header__inner {
+
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.logo {
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+}
+
+
+.navigation {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+
+    font-size: 12px;
+}
+
+
+.navigation__link {
+
+    position: relative;
+
+    opacity: 0.72;
+
+    transition:
+        opacity var(--transition);
+}
+
+
+.navigation__link:hover,
+.navigation__link.active {
+
+    opacity: 1;
+}
+
+
+.navigation__link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 1px;
+
+    background: white;
+
+    transition:
+        width var(--transition);
+}
+
+
+.navigation__link:hover::after,
+.navigation__link.active::after {
+
+    width: 100%;
+}
+
+
+.navigation__search {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-left: 10px;
+
+    font-size: 12px;
+}
+
+
+.search-icon {
+
+    width: 13px;
+    height: 13px;
+
+    position: relative;
+
+    border: 1px solid white;
+
+    border-radius: 50%;
+}
+
+
+.search-icon::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: -4px;
+    bottom: -2px;
+
+    width: 5px;
+    height: 1px;
+
+    background: white;
+
+    transform: rotate(45deg);
+}
+
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.menu-button {
+
+    display: none;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    background: transparent;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    gap: 5px;
+}
+
+
+.menu-button span {
+
+    width: 24px;
+    height: 1px;
+
+    background: white;
+
+    transition:
+        transform var(--transition),
+        opacity var(--transition);
+}
+
+
+.menu-button span:nth-child(2) {
+
+    width: 17px;
+}
+
+
+.menu-button.active span:nth-child(1) {
+
+    transform:
+        translateY(6px)
+        rotate(45deg);
+}
+
+
+.menu-button.active span:nth-child(2) {
+
+    opacity: 0;
+}
+
+
+.menu-button.active span:nth-child(3) {
+
+    width: 24px;
+
+    transform:
+        translateY(-6px)
+        rotate(-45deg);
+}
+
+
+.mobile-navigation {
+
+    display: none;
+}
+
+
+
+/* =========================================
+   COUNTRIES HERO
+========================================= */
+
+.countries-hero {
+
+    position: relative;
+
+    height: 100vh;
+
+    min-height: 720px;
+
+    overflow: hidden;
+
+    color: white;
+}
+
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.countries-hero__background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url(
+            "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=2200&q=90"
+        );
+
+    background-position: center;
+
+    background-size: cover;
+
+    transform: scale(1.03);
+
+    transition:
+        opacity 0.45s ease,
+        transform 1.2s cubic-bezier(.2,.8,.2,1);
+}
+
+
+.countries-hero__background.changing {
+
+    opacity: 0.35;
+
+    transform: scale(1.06);
+}
+
+
+.countries-hero__overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.58),
+            rgba(0,0,0,0.15)
+        );
+}
+
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.countries-hero__content {
+
+    position: relative;
+
+    z-index: 3;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.countries-hero__text {
+
+    max-width: 850px;
+
+    padding-top: 80px;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.5s ease;
+}
+
+
+.countries-hero__text.changing {
+
+    opacity: 0;
+
+    transform:
+        translateY(20px);
+}
+
+
+.hero-label {
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    color:
+        rgba(255,255,255,0.75);
+}
+
+
+.countries-hero__text h1 {
+
+    font-size:
+        clamp(70px, 10vw, 145px);
+
+    line-height: 0.88;
+
+    letter-spacing: -0.065em;
+
+    font-weight: 600;
+}
+
+
+.countries-hero__text p {
+
+    max-width: 510px;
+
+    margin:
+        30px 0 32px;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+
+    color:
+        rgba(255,255,255,0.82);
+}
+
+
+
+/* =========================================
+   EXPLORE BUTTON
+========================================= */
+
+.explore-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding:
+        14px 20px;
+
+    border:
+        1px solid rgba(255,255,255,0.7);
+
+    border-radius: 100px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    backdrop-filter:
+        blur(8px);
+
+    font-size: 12px;
+
+    transition:
+        background var(--transition),
+        color var(--transition),
+        transform var(--transition);
+}
+
+
+.explore-button:hover {
+
+    background: white;
+
+    color: black;
+
+    transform:
+        translateY(-2px);
+}
+
+
+.explore-button__arrow {
+
+    font-size: 18px;
+
+    transition:
+        transform var(--transition);
+}
+
+
+.explore-button:hover
+.explore-button__arrow {
+
+    transform:
+        translateX(4px);
+}
+
+
+
+/* =========================================
+   HERO MESSAGE
+========================================= */
+
+.hero-message {
+
+    position: absolute;
+
+    z-index: 5;
+
+    left: 0;
+    bottom: 34px;
+
+    width: 100%;
+}
+
+
+.hero-message__inner {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.14em;
+
+    color:
+        rgba(255,255,255,0.65);
+}
+
+
+.hero-message__line {
+
+    width: 60px;
+
+    height: 1px;
+
+    background:
+        rgba(255,255,255,0.5);
+}
+
+
+
+/* =========================================
+   CHOOSE COUNTRY
+========================================= */
+
+.choose-country {
+
+    position: absolute;
+
+    z-index: 10;
+
+    left: 50%;
+
+    bottom: 33px;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 11px 18px;
+
+    border:
+        1px solid rgba(255,255,255,0.5);
+
+    border-radius: 100px;
+
+    background:
+        rgba(0,0,0,0.12);
+
+    backdrop-filter:
+        blur(10px);
+
+    color: white;
+
+    font-size: 10px;
+
+    transition:
+        background var(--transition),
+        transform var(--transition);
+}
+
+
+.choose-country:hover {
+
+    background:
+        rgba(255,255,255,0.15);
+
+    transform:
+        translateX(-50%)
+        translateY(-2px);
+}
+
+
+.choose-country span:last-child {
+
+    font-size: 14px;
+}
+
+
+
+/* =========================================
+   COUNTRY SLIDER
+========================================= */
+
+.country-slider {
+
+    position: absolute;
+
+    z-index: 6;
+
+    right: 0;
+    bottom: 25px;
+
+    width:
+        min(700px, 53vw);
+
+    overflow: hidden;
+
+    padding-left: 20px;
+}
+
+
+.country-slider__track {
+
+    display: flex;
+
+    gap: 12px;
+
+    width: max-content;
+
+    transform:
+        translateX(0);
+
+    transition:
+        transform 0.7s cubic-bezier(.2,.8,.2,1);
+}
+
+
+
+/* =========================================
+   COUNTRY CARD
+========================================= */
+
+.country-card {
+
+    position: relative;
+
+    flex-shrink: 0;
+
+    width: 145px;
+    height: 190px;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    border: 1px solid
+        rgba(255,255,255,0.28);
+
+    border-radius: 16px;
+
+    background: transparent;
+
+    color: white;
+
+    text-align: left;
+
+    transition:
+        width 0.5s ease,
+        transform 0.5s ease,
+        border-color 0.35s ease;
+}
+
+
+.country-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        rgba(255,255,255,0.7);
+}
+
+
+.country-card.active {
+
+    width: 180px;
+
+    border-color: white;
+}
+
+
+.country-card img {
+
+    position: absolute;
+
+    inset: 0;
+
+    transition:
+        transform 0.7s ease;
+}
+
+
+.country-card:hover img {
+
+    transform:
+        scale(1.07);
+}
+
+
+.country-card__overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,0.1),
+            rgba(0,0,0,0.65)
+        );
+}
+
+
+.country-card__top {
+
+    position: absolute;
+
+    top: 15px;
+    left: 16px;
+
+    font-size: 9px;
+
+    letter-spacing: 0.15em;
+
+    color:
+        rgba(255,255,255,0.7);
+}
+
+
+.country-card__bottom {
+
+    position: absolute;
+
+    left: 16px;
+    right: 16px;
+    bottom: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.country-card__bottom strong {
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.03em;
+}
+
+
+.country-card__bottom span {
+
+    font-size: 17px;
+
+    opacity: 0.75;
+
+    transition:
+        transform var(--transition);
+}
+
+
+.country-card:hover
+.country-card__bottom span {
+
+    transform:
+        translateX(3px);
+}
+
+
+
+/* =========================================
+   CHOOSE SECTION
+========================================= */
+
+.choose {
+
+    padding:
+        125px 0;
+
+    background:
+        #e9e8e4;
+}
+
+
+.choose__box {
+
+    min-height: 600px;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+        var(--black);
+
+    color: white;
+}
+
+
+.choose__content {
+
+    padding:
+        70px 80px;
+}
+
+
+.section-label {
+
+    display: block;
+
+    margin-bottom: 17px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    color: #777;
+
+    text-transform: uppercase;
+}
+
+
+.choose__content h2 {
+
+    max-width: 700px;
+
+    font-size:
+        clamp(55px, 7vw, 90px);
+
+    line-height: 0.95;
+
+    letter-spacing: -0.055em;
+
+    font-weight: 500;
+}
+
+
+.choose__content p {
+
+    max-width: 470px;
+
+    margin:
+        32px 0 38px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #a9a9a9;
+}
+
+
+.choose__button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    padding:
+        13px 20px;
+
+    border:
+        1px solid rgba(255,255,255,0.7);
+
+    border-radius: 100px;
+
+    background:
+        rgba(255,255,255,0.07);
+
+    font-size: 12px;
+
+    transition:
+        background var(--transition),
+        color var(--transition),
+        transform var(--transition);
+}
+
+
+.choose__button:hover {
+
+    background: white;
+
+    color: black;
+
+    transform:
+        translateY(-2px);
+}
+
+
+.choose__button span:last-child {
+
+    font-size: 17px;
+
+    transition:
+        transform var(--transition);
+}
+
+
+.choose__button:hover span:last-child {
+
+    transform:
+        translateX(4px);
+}
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    padding:
+        80px 0 30px;
+
+    background:
+        var(--black);
+
+    color: white;
+}
+
+
+.footer__top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 80px;
+
+    padding-bottom: 75px;
+}
+
+
+.footer__brand p {
+
+    margin-top: 15px;
+
+    font-size: 12px;
+
+    color: #777;
+}
+
+
+.footer__links {
+
+    display: flex;
+
+    gap: 90px;
+}
+
+
+.footer__column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    min-width: 120px;
+}
+
+
+.footer__column span {
+
+    margin-bottom: 10px;
+
+    font-size: 9px;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+
+    color: #666;
+}
+
+
+.footer__column a {
+
+    font-size: 12px;
+
+    color: #aaa;
+
+    transition:
+        color var(--transition);
+}
+
+
+.footer__column a:hover {
+
+    color: white;
+}
+
+
+.footer__bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid #2e2e2e;
+
+    font-size: 9px;
+
+    color: #5e5e5e;
+}
+
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+
+    .container {
+
+        width:
+            calc(100% - 50px);
+    }
+
+
+    .navigation {
+
+        display: none;
+    }
+
+
+    .menu-button {
+
+        display: flex;
+    }
+
+
+    .mobile-navigation {
+
+        position: fixed;
+
+        inset: 0;
+
+        z-index: -1;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 25px;
+
+        padding:
+            100px 25px 40px;
+
+        background:
+            var(--black);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transform:
+            translateY(-10px);
+
+        transition:
+            opacity var(--transition),
+            visibility var(--transition),
+            transform var(--transition);
+    }
+
+
+    .mobile-navigation.open {
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform:
+            translateY(0);
+    }
+
+
+    .mobile-navigation a {
+
+        font-size: 34px;
+
+        font-weight: 500;
+
+        letter-spacing: -0.04em;
+    }
+
+
+    .country-slider {
+
+        width: 58vw;
+    }
+
+
+    .choose__content {
+
+        padding:
+            60px 50px;
+    }
+
+
+    .footer__top {
+
+        flex-direction: column;
+    }
+
+}
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+
+    .container {
+
+        width:
+            calc(100% - 30px);
+    }
+
+
+    .header__inner {
+
+        height: 75px;
+    }
+
+
+    .logo {
+
+        font-size: 19px;
+    }
+
+
+    .countries-hero {
+
+        height: 820px;
+
+        min-height: 820px;
+    }
+
+
+    .countries-hero__background {
+
+        background-position:
+            center center;
+    }
+
+
+    .countries-hero__content {
+
+        align-items: flex-start;
+
+        padding-top: 190px;
+    }
+
+
+    .countries-hero__text {
+
+        padding-top: 0;
+
+        max-width: 100%;
+    }
+
+
+    .hero-label {
+
+        margin-bottom: 16px;
+
+        font-size: 9px;
+    }
+
+
+    .countries-hero__text h1 {
+
+        font-size:
+            clamp(62px, 18vw, 88px);
+    }
+
+
+    .countries-hero__text p {
+
+        max-width: 340px;
+
+        margin:
+            23px 0 25px;
+
+        font-size: 13px;
+
+        line-height: 1.65;
+    }
+
+
+    .hero-message {
+
+        bottom: 275px;
+    }
+
+
+    .hero-message__inner {
+
+        justify-content: flex-start;
+    }
+
+
+    .hero-message__inner span:first-child {
+
+        max-width: 190px;
+    }
+
+
+    .hero-message__line {
+
+        width: 35px;
+    }
+
+
+    .hero-message__inner span:last-child {
+
+        margin-left: auto;
+    }
+
+
+    .choose-country {
+
+        left: 15px;
+
+        bottom: 235px;
+
+        transform: none;
+    }
+
+
+    .choose-country:hover {
+
+        transform:
+            translateY(-2px);
+    }
+
+
+    /* MOBILE CARDS */
+
+    .country-slider {
+
+        left: 0;
+        right: 0;
+
+        bottom: 20px;
+
+        width: 100%;
+
+        padding-left: 15px;
+
+        overflow-x: hidden;
+    }
+
+
+    .country-slider__track {
+
+        gap: 9px;
+
+        transition:
+            transform 0.6s cubic-bezier(.2,.8,.2,1);
+    }
+
+
+    .country-card {
+
+        width: 125px;
+
+        height: 170px;
+
+        border-radius: 14px;
+    }
+
+
+    .country-card.active {
+
+        width: 145px;
+    }
+
+
+    .country-card__bottom {
+
+        left: 13px;
+        right: 13px;
+        bottom: 13px;
+    }
+
+
+    .country-card__bottom strong {
+
+        font-size: 15px;
+    }
+
+
+    .country-card__top {
+
+        top: 13px;
+        left: 13px;
+    }
+
+
+    /* CHOOSE */
+
+    .choose {
+
+        padding:
+            70px 0;
+    }
+
+
+    .choose__box {
+
+        min-height: 500px;
+
+        align-items: flex-start;
+    }
+
+
+    .choose__content {
+
+        padding:
+            55px 25px;
+    }
+
+
+    .choose__content h2 {
+
+        font-size:
+            clamp(48px, 14vw, 65px);
+    }
+
+
+    .choose__content p {
+
+        margin:
+            27px 0 32px;
+
+        font-size: 13px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+
+        padding:
+            65px 0 25px;
+    }
+
+
+    .footer__top {
+
+        padding-bottom: 55px;
+    }
+
+
+    .footer__links {
+
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 40px 20px;
+    }
+
+
+    .footer__column:last-child {
+
+        grid-column:
+            span 2;
+    }
+
+
+    .footer__bottom {
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+}
+
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 400px) {
+
+
+    .countries-hero {
+
+        height: 800px;
+
+        min-height: 800px;
+    }
+
+
+    .countries-hero__content {
+
+        padding-top: 175px;
+    }
+
+
+    .countries-hero__text h1 {
+
+        font-size: 60px;
+    }
+
+
+    .countries-hero__text p {
+
+        max-width: 300px;
+
+        font-size: 12px;
+    }
+
+
+    .hero-message {
+
+        bottom: 265px;
+    }
+
+
+    .choose-country {
+
+        bottom: 225px;
+    }
+
+
+    .country-card {
+
+        width: 115px;
+
+        height: 155px;
+    }
+
+
+    .country-card.active {
+
+        width: 135px;
+    }
+
+
+    .country-card__bottom strong {
+
+        font-size: 14px;
+    }
+
+
+    .choose__content h2 {
+
+        font-size: 47px;
+    }
+
+}
