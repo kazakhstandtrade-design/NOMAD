@@ -1,0 +1,2214 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family:
+        "Manrope",
+        sans-serif;
+
+    background:
+        #f5f5f3;
+
+    color:
+        #111;
+
+    line-height:
+        1.5;
+
+    overflow-x:
+        hidden;
+}
+
+
+a {
+    color:
+        inherit;
+
+    text-decoration:
+        none;
+}
+
+
+button {
+    font-family:
+        inherit;
+
+    cursor:
+        pointer;
+}
+
+
+img {
+    display:
+        block;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+}
+
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --black:
+        #111111;
+
+    --white:
+        #ffffff;
+
+    --gray:
+        #777777;
+
+    --background:
+        #f5f5f3;
+
+    --transition:
+        .4s ease;
+
+    --container:
+        1320px;
+}
+
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container {
+
+    width:
+        min(
+            calc(100% - 80px),
+            var(--container)
+        );
+
+    margin:
+        0 auto;
+}
+
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.countries-hero {
+
+    position:
+        relative;
+
+    height:
+        100vh;
+
+    min-height:
+        720px;
+
+    overflow:
+        hidden;
+
+    color:
+        white;
+
+    background:
+        #777;
+}
+
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.countries-hero__background {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background-position:
+        center;
+
+    background-size:
+        cover;
+
+    background-repeat:
+        no-repeat;
+
+    transform:
+        scale(1.04);
+
+    opacity:
+        0;
+
+    transition:
+        opacity .9s cubic-bezier(.2,.8,.2,1),
+        transform 1.4s cubic-bezier(.2,.8,.2,1);
+
+    will-change:
+        opacity,
+        transform;
+}
+
+
+.background-one {
+
+    opacity:
+        1;
+
+    background-image:
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2400&q=90");
+}
+
+
+.background-two {
+    opacity:
+        0;
+}
+
+
+.countries-hero__background.is-visible {
+
+    opacity:
+        1;
+
+    transform:
+        scale(1.02);
+}
+
+
+.countries-hero__background.is-zooming {
+
+    transform:
+        scale(1.09);
+}
+
+
+
+/* =====================================================
+   OVERLAY
+===================================================== */
+
+.countries-hero__overlay {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    z-index:
+        2;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.64),
+            rgba(0,0,0,.18)
+        );
+
+    pointer-events:
+        none;
+}
+
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    z-index:
+        100;
+
+    width:
+        100%;
+
+    color:
+        white;
+}
+
+
+.header__inner {
+
+    height:
+        90px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+}
+
+
+.logo {
+
+    font-size:
+        21px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .08em;
+}
+
+
+.navigation {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        32px;
+
+    font-size:
+        12px;
+}
+
+
+.navigation__link {
+
+    position:
+        relative;
+
+    opacity:
+        .72;
+
+    transition:
+        opacity var(--transition);
+}
+
+
+.navigation__link:hover,
+.navigation__link.active {
+
+    opacity:
+        1;
+}
+
+
+.navigation__link::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    bottom:
+        -7px;
+
+    width:
+        0;
+
+    height:
+        1px;
+
+    background:
+        white;
+
+    transition:
+        width var(--transition);
+}
+
+
+.navigation__link:hover::after,
+.navigation__link.active::after {
+
+    width:
+        100%;
+}
+
+
+.navigation__search {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    margin-left:
+        10px;
+
+    font-size:
+        12px;
+}
+
+
+.search-icon {
+
+    position:
+        relative;
+
+    width:
+        13px;
+
+    height:
+        13px;
+
+    border:
+        1px solid white;
+
+    border-radius:
+        50%;
+}
+
+
+.search-icon::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    right:
+        -4px;
+
+    bottom:
+        -2px;
+
+    width:
+        5px;
+
+    height:
+        1px;
+
+    background:
+        white;
+
+    transform:
+        rotate(45deg);
+}
+
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+.menu-button {
+
+    display:
+        none;
+
+    width:
+        35px;
+
+    height:
+        35px;
+
+    border:
+        none;
+
+    background:
+        transparent;
+
+    flex-direction:
+        column;
+
+    align-items:
+        flex-end;
+
+    justify-content:
+        center;
+
+    gap:
+        5px;
+}
+
+
+.menu-button span {
+
+    width:
+        24px;
+
+    height:
+        1px;
+
+    background:
+        white;
+
+    transition:
+        transform var(--transition),
+        opacity var(--transition);
+}
+
+
+.menu-button span:nth-child(2) {
+
+    width:
+        17px;
+}
+
+
+.menu-button.active span:nth-child(1) {
+
+    transform:
+        translateY(6px)
+        rotate(45deg);
+}
+
+
+.menu-button.active span:nth-child(2) {
+
+    opacity:
+        0;
+}
+
+
+.menu-button.active span:nth-child(3) {
+
+    width:
+        24px;
+
+    transform:
+        translateY(-6px)
+        rotate(-45deg);
+}
+
+
+
+/* =====================================================
+   MOBILE NAVIGATION
+===================================================== */
+
+.mobile-navigation {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        -1;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    gap:
+        25px;
+
+    padding:
+        100px 25px 40px;
+
+    background:
+        #111;
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    transform:
+        translateY(-10px);
+
+    transition:
+        opacity var(--transition),
+        visibility var(--transition),
+        transform var(--transition);
+}
+
+
+.mobile-navigation.open {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+    transform:
+        translateY(0);
+}
+
+
+.mobile-navigation a {
+
+    font-size:
+        34px;
+
+    font-weight:
+        500;
+
+    letter-spacing:
+        -.04em;
+}
+
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.countries-hero__content {
+
+    position:
+        relative;
+
+    z-index:
+        4;
+
+    height:
+        100%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+}
+
+
+.countries-hero__text {
+
+    max-width:
+        800px;
+
+    padding-top:
+        30px;
+}
+
+
+.countries-hero__label {
+
+    display:
+        block;
+
+    margin-bottom:
+        20px;
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .16em;
+
+    opacity:
+        .7;
+}
+
+
+.countries-hero h1 {
+
+    font-size:
+        clamp(
+            65px,
+            9vw,
+            125px
+        );
+
+    line-height:
+        .88;
+
+    letter-spacing:
+        -.065em;
+
+    font-weight:
+        500;
+
+    transition:
+        opacity .35s ease,
+        transform .35s ease;
+}
+
+
+.countries-hero__text.changed h1 {
+
+    animation:
+        titleReveal .65s ease;
+}
+
+
+@keyframes titleReveal {
+
+    0% {
+        opacity:
+            0;
+
+        transform:
+            translateY(20px);
+    }
+
+    100% {
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+.countries-hero__text p {
+
+    max-width:
+        470px;
+
+    margin:
+        32px 0 30px;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.75;
+
+    color:
+        rgba(255,255,255,.82);
+
+    transition:
+        opacity .35s ease;
+}
+
+
+
+/* =====================================================
+   EXPLORE BUTTON
+===================================================== */
+
+.explore-button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        18px;
+
+    padding:
+        13px 21px;
+
+    border:
+        1px solid rgba(255,255,255,.75);
+
+    border-radius:
+        100px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    backdrop-filter:
+        blur(8px);
+
+    font-size:
+        12px;
+
+    font-weight:
+        500;
+
+    opacity:
+        0;
+
+    pointer-events:
+        none;
+
+    transform:
+        translateY(10px);
+
+    transition:
+        opacity .5s ease,
+        transform .5s ease,
+        background var(--transition),
+        color var(--transition);
+}
+
+
+.explore-button.visible {
+
+    opacity:
+        1;
+
+    pointer-events:
+        auto;
+
+    transform:
+        translateY(0);
+}
+
+
+.explore-button:hover {
+
+    background:
+        white;
+
+    color:
+        black;
+
+    transform:
+        translateY(-2px);
+}
+
+
+.explore-button__arrow {
+
+    font-size:
+        17px;
+
+    transition:
+        transform var(--transition);
+}
+
+
+.explore-button:hover
+.explore-button__arrow {
+
+    transform:
+        translateX(4px);
+}
+
+
+
+/* =====================================================
+   HERO BOTTOM
+===================================================== */
+
+.countries-hero__bottom {
+
+    position:
+        absolute;
+
+    z-index:
+        5;
+
+    left:
+        0;
+
+    bottom:
+        35px;
+
+    width:
+        100%;
+}
+
+
+.countries-hero__bottom-inner {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+}
+
+
+.hero-message {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    max-width:
+        400px;
+
+    font-size:
+        9px;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        .13em;
+
+    color:
+        rgba(255,255,255,.68);
+}
+
+
+.hero-message__line {
+
+    width:
+        55px;
+
+    height:
+        1px;
+
+    background:
+        rgba(255,255,255,.5);
+}
+
+
+.hero-counter {
+
+    display:
+        flex;
+
+    gap:
+        5px;
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        .15em;
+
+    color:
+        rgba(255,255,255,.65);
+}
+
+
+
+/* =====================================================
+   COUNTRY SLIDER
+===================================================== */
+
+.countries-slider {
+
+    position:
+        absolute;
+
+    z-index:
+        10;
+
+    right:
+        40px;
+
+    bottom:
+        85px;
+
+    width:
+        min(
+            760px,
+            55vw
+        );
+
+    overflow:
+        hidden;
+}
+
+
+.countries-slider__track {
+
+    display:
+        flex;
+
+    gap:
+        12px;
+
+    width:
+        max-content;
+
+    transition:
+        transform .75s cubic-bezier(.2,.8,.2,1);
+}
+
+
+
+/* =====================================================
+   COUNTRY CARD
+===================================================== */
+
+.country-card {
+
+    position:
+        relative;
+
+    flex:
+        0 0 180px;
+
+    height:
+        250px;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        18px;
+
+    cursor:
+        pointer;
+
+    opacity:
+        .88;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.25);
+
+    transition:
+        transform .75s cubic-bezier(.2,.8,.2,1),
+        opacity .5s ease,
+        flex-basis .75s cubic-bezier(.2,.8,.2,1);
+}
+
+
+.country-card img {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    transition:
+        transform .8s cubic-bezier(.2,.8,.2,1);
+}
+
+
+.country-card:hover img {
+
+    transform:
+        scale(1.07);
+}
+
+
+.country-card__overlay {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.05),
+            rgba(0,0,0,.72)
+        );
+}
+
+
+.country-card__content {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        space-between;
+
+    padding:
+        20px;
+
+    color:
+        white;
+}
+
+
+.country-card__number {
+
+    align-self:
+        flex-end;
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        .15em;
+
+    opacity:
+        .75;
+}
+
+
+.country-card h2 {
+
+    margin-bottom:
+        4px;
+
+    font-size:
+        26px;
+
+    font-weight:
+        500;
+
+    letter-spacing:
+        -.04em;
+}
+
+
+.country-card__hint {
+
+    font-size:
+        8px;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        .15em;
+
+    opacity:
+        .7;
+}
+
+
+
+/* =====================================================
+   ACTIVE CARD
+===================================================== */
+
+.country-card.active {
+
+    flex-basis:
+        220px;
+
+    opacity:
+        1;
+
+    transform:
+        translateY(-12px);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.35);
+}
+
+
+.country-card.active img {
+
+    transform:
+        scale(1.08);
+}
+
+
+.country-card.active::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    border:
+        1px solid rgba(255,255,255,.55);
+
+    border-radius:
+        18px;
+
+    pointer-events:
+        none;
+}
+
+
+
+/* =====================================================
+   THE WORLD IS WAITING
+===================================================== */
+
+.world-waiting {
+
+    position:
+        relative;
+
+    min-height:
+        650px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    overflow:
+        hidden;
+
+    background:
+        #f5f5f3;
+
+    color:
+        #111;
+}
+
+
+.world-waiting__inner {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    min-height:
+        650px;
+
+    padding:
+        110px 6vw 60px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+}
+
+
+.world-waiting__label {
+
+    position:
+        absolute;
+
+    top:
+        105px;
+
+    left:
+        6vw;
+
+    font-size:
+        10px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        .15em;
+
+    color:
+        #777;
+}
+
+
+.world-waiting__words {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    font-size:
+        clamp(
+            90px,
+            16vw,
+            240px
+        );
+
+    line-height:
+        .76;
+
+    letter-spacing:
+        -.085em;
+
+    font-weight:
+        400;
+}
+
+
+.world-waiting__words > span:first-child {
+
+    margin-left:
+        0;
+}
+
+
+.somewhere {
+
+    display:
+        block;
+
+    width:
+        max-content;
+
+    margin-left:
+        9vw;
+
+    transition:
+        transform .15s linear;
+}
+
+
+.world-waiting__bottom {
+
+    position:
+        absolute;
+
+    bottom:
+        55px;
+
+    left:
+        6vw;
+
+    right:
+        6vw;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        .15em;
+
+    color:
+        #999;
+}
+
+
+
+/* =====================================================
+   CHOOSE
+===================================================== */
+
+.choose {
+
+    padding:
+        125px 0;
+
+    background:
+        #e9e8e4;
+}
+
+
+.choose__box {
+
+    min-height:
+        600px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    background:
+        #111;
+
+    color:
+        white;
+}
+
+
+.choose__content {
+
+    padding:
+        80px;
+
+    max-width:
+        720px;
+}
+
+
+.section-label {
+
+    display:
+        block;
+
+    margin-bottom:
+        18px;
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .15em;
+
+    color:
+        #777;
+
+    text-transform:
+        uppercase;
+}
+
+
+.choose h2 {
+
+    font-size:
+        clamp(
+            50px,
+            6vw,
+            80px
+        );
+
+    line-height:
+        .96;
+
+    letter-spacing:
+        -.055em;
+
+    font-weight:
+        500;
+}
+
+
+.choose p {
+
+    max-width:
+        500px;
+
+    margin:
+        30px 0 38px;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.75;
+
+    color:
+        #a5a5a5;
+}
+
+
+.choose__button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        18px;
+
+    padding:
+        13px 21px;
+
+    border:
+        1px solid rgba(255,255,255,.7);
+
+    border-radius:
+        100px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    font-size:
+        12px;
+
+    transition:
+        background var(--transition),
+        color var(--transition),
+        transform var(--transition);
+}
+
+
+.choose__button span {
+
+    font-size:
+        17px;
+
+    transition:
+        transform var(--transition);
+}
+
+
+.choose__button:hover {
+
+    background:
+        white;
+
+    color:
+        black;
+
+    transform:
+        translateY(-2px);
+}
+
+
+.choose__button:hover span {
+
+    transform:
+        translateX(4px);
+}
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+
+    padding:
+        80px 0 30px;
+
+    background:
+        #111;
+
+    color:
+        white;
+}
+
+
+.footer__top {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    gap:
+        80px;
+
+    padding-bottom:
+        75px;
+}
+
+
+.footer__brand p {
+
+    margin-top:
+        15px;
+
+    font-size:
+        12px;
+
+    color:
+        #777;
+}
+
+
+.footer__links {
+
+    display:
+        flex;
+
+    gap:
+        90px;
+}
+
+
+.footer__column {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        10px;
+
+    min-width:
+        120px;
+}
+
+
+.footer__column span {
+
+    margin-bottom:
+        10px;
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        .13em;
+
+    text-transform:
+        uppercase;
+
+    color:
+        #666;
+}
+
+
+.footer__column a {
+
+    font-size:
+        12px;
+
+    color:
+        #aaa;
+
+    transition:
+        color var(--transition);
+}
+
+
+.footer__column a:hover {
+
+    color:
+        white;
+}
+
+
+.footer__bottom {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    padding-top:
+        25px;
+
+    border-top:
+        1px solid #2e2e2e;
+
+    font-size:
+        9px;
+
+    color:
+        #5e5e5e;
+}
+
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .container {
+
+        width:
+            calc(100% - 50px);
+    }
+
+
+    .navigation {
+
+        display:
+            none;
+    }
+
+
+    .menu-button {
+
+        display:
+            flex;
+    }
+
+
+    .countries-slider {
+
+        right:
+            25px;
+
+        width:
+            65vw;
+    }
+
+
+    .country-card {
+
+        flex-basis:
+            170px;
+
+        height:
+            230px;
+    }
+
+
+    .country-card.active {
+
+        flex-basis:
+            205px;
+    }
+
+
+    .choose__content {
+
+        padding:
+            60px 50px;
+    }
+
+
+    .footer__top {
+
+        flex-direction:
+            column;
+    }
+
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .container {
+
+        width:
+            calc(100% - 30px);
+    }
+
+
+    .countries-hero {
+
+        height:
+            850px;
+
+        min-height:
+            850px;
+    }
+
+
+    .countries-hero__background {
+
+        background-position:
+            center center;
+    }
+
+
+    .header__inner {
+
+        height:
+            75px;
+    }
+
+
+    .logo {
+
+        font-size:
+            19px;
+    }
+
+
+    .countries-hero__content {
+
+        align-items:
+            center;
+
+        padding-bottom:
+            165px;
+    }
+
+
+    .countries-hero__text {
+
+        padding-top:
+            20px;
+    }
+
+
+    .countries-hero__label {
+
+        margin-bottom:
+            17px;
+
+        font-size:
+            9px;
+    }
+
+
+    .countries-hero h1 {
+
+        font-size:
+            clamp(
+                54px,
+                16vw,
+                78px
+            );
+
+        line-height:
+            .92;
+    }
+
+
+    .countries-hero__text p {
+
+        max-width:
+            330px;
+
+        margin:
+            25px 0;
+
+        font-size:
+            13px;
+    }
+
+
+    /* -----------------------------------------
+       MOBILE CARDS
+    ----------------------------------------- */
+
+    .countries-slider {
+
+        left:
+            0;
+
+        right:
+            0;
+
+        bottom:
+            72px;
+
+        width:
+            100%;
+
+        overflow-x:
+            auto;
+
+        overflow-y:
+            visible;
+
+        padding:
+            15px 15px 25px;
+
+        -webkit-overflow-scrolling:
+            touch;
+
+        scrollbar-width:
+            none;
+    }
+
+
+    .countries-slider::-webkit-scrollbar {
+        display:
+            none;
+    }
+
+
+    .countries-slider__track {
+
+        gap:
+            12px;
+
+        width:
+            max-content;
+
+        transform:
+            none !important;
+
+        transition:
+            none;
+    }
+
+
+    .country-card {
+
+        flex:
+            0 0 150px;
+
+        width:
+            150px;
+
+        height:
+            205px;
+
+        border-radius:
+            16px;
+
+        opacity:
+            .9;
+
+        transform:
+            translateY(0);
+    }
+
+
+    .country-card.active {
+
+        flex:
+            0 0 180px;
+
+        width:
+            180px;
+
+        transform:
+            translateY(-8px);
+
+        opacity:
+            1;
+    }
+
+
+    .country-card__content {
+
+        padding:
+            17px;
+    }
+
+
+    .country-card h2 {
+
+        font-size:
+            22px;
+    }
+
+
+    .country-card__hint {
+
+        font-size:
+            7px;
+    }
+
+
+
+    /* -----------------------------------------
+       HERO BOTTOM
+    ----------------------------------------- */
+
+    .countries-hero__bottom {
+
+        bottom:
+            24px;
+    }
+
+
+    .hero-message {
+
+        font-size:
+            7px;
+
+        gap:
+            9px;
+
+        max-width:
+            280px;
+    }
+
+
+    .hero-message__line {
+
+        width:
+            30px;
+    }
+
+
+    .hero-counter {
+
+        font-size:
+            8px;
+    }
+
+
+
+    /* -----------------------------------------
+       GO SOMEWHERE
+    ----------------------------------------- */
+
+    .world-waiting {
+
+        min-height:
+            520px;
+    }
+
+
+    .world-waiting__inner {
+
+        min-height:
+            520px;
+
+        padding:
+            95px 20px 50px;
+    }
+
+
+    .world-waiting__label {
+
+        top:
+            55px;
+
+        left:
+            20px;
+
+        right:
+            20px;
+
+        font-size:
+            8px;
+
+        letter-spacing:
+            .12em;
+    }
+
+
+    .world-waiting__words {
+
+        font-size:
+            clamp(
+                72px,
+                22vw,
+                125px
+            );
+
+        line-height:
+            .78;
+
+        letter-spacing:
+            -.085em;
+    }
+
+
+    .somewhere {
+
+        margin-left:
+            7vw;
+    }
+
+
+    .world-waiting__bottom {
+
+        left:
+            20px;
+
+        right:
+            20px;
+
+        bottom:
+            28px;
+
+        font-size:
+            7px;
+    }
+
+
+
+    /* -----------------------------------------
+       CHOOSE
+    ----------------------------------------- */
+
+    .choose {
+
+        padding:
+            70px 0;
+    }
+
+
+    .choose__box {
+
+        min-height:
+            520px;
+    }
+
+
+    .choose__content {
+
+        padding:
+            55px 25px;
+    }
+
+
+    .choose h2 {
+
+        font-size:
+            51px;
+    }
+
+
+    .choose p {
+
+        margin:
+            25px 0 32px;
+
+        font-size:
+            13px;
+    }
+
+
+
+    /* -----------------------------------------
+       FOOTER
+    ----------------------------------------- */
+
+    .footer {
+
+        padding:
+            65px 0 25px;
+    }
+
+
+    .footer__top {
+
+        padding-bottom:
+            55px;
+    }
+
+
+    .footer__links {
+
+        display:
+            grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            40px 20px;
+    }
+
+
+    .footer__column:last-child {
+
+        grid-column:
+            span 2;
+    }
+
+
+    .footer__bottom {
+
+        flex-direction:
+            column;
+
+        gap:
+            10px;
+    }
+
+}
+
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .countries-hero {
+
+        height:
+            820px;
+
+        min-height:
+            820px;
+    }
+
+
+    .countries-hero__content {
+
+        padding-bottom:
+            155px;
+    }
+
+
+    .countries-hero h1 {
+
+        font-size:
+            52px;
+    }
+
+
+    .country-card {
+
+        flex-basis:
+            140px;
+
+        width:
+            140px;
+
+        height:
+            195px;
+    }
+
+
+    .country-card.active {
+
+        flex-basis:
+            165px;
+
+        width:
+            165px;
+    }
+
+
+    .world-waiting {
+
+        min-height:
+            470px;
+    }
+
+
+    .world-waiting__inner {
+
+        min-height:
+            470px;
+    }
+
+
+    .world-waiting__words {
+
+        font-size:
+            67px;
+    }
+
+
+    .choose h2 {
+
+        font-size:
+            47px;
+    }
+
+}
