@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="NOMAD — curated journeys and unforgettable travel experiences."
+    >
+
+    <title>NOMAD — Travel Your Way</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="container header__inner">
+
+            <a href="index.html" class="logo">
+                NOMAD
+            </a>
+
+
+            <nav class="nav">
+
+                <a href="destinations.html">
+                    Destinations
+                </a>
+
+                <a href="journeys.html">
+                    Journeys
+                </a>
+
+                <a href="plan.html">
+                    Plan your trip
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+            </nav>
+
+
+            <div class="header__actions">
+
+                <a href="login.html" class="login-link">
+                    Log in
+                </a>
+
+                <a href="plan.html" class="btn btn--dark">
+                    Plan a trip
+                </a>
+
+            </div>
+
+
+            <button
+                class="menu-toggle"
+                aria-label="Open menu"
+            >
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="hero__image"></div>
+
+            <div class="hero__overlay"></div>
+
+
+            <div class="container hero__content">
+
+                <p class="eyebrow eyebrow--light">
+                    CURATED TRAVEL EXPERIENCES
+                </p>
+
+
+                <h1>
+                    Travel
+                    <span>with intention.</span>
+                </h1>
+
+
+                <p class="hero__description">
+                    Discover remarkable places and thoughtfully
+                    designed journeys made for the way you want to travel.
+                </p>
+
+
+                <a href="plan.html" class="btn btn--light">
+                    Find your journey
+                    <span>→</span>
+                </a>
+
+            </div>
+
+
+            <!-- SEARCH -->
+
+            <div class="container hero__search">
+
+                <div class="search-box">
+
+                    <div class="search-field">
+
+                        <span class="search-icon">⌖</span>
+
+                        <div>
+                            <span class="search-label">
+                                Destination
+                            </span>
+
+                            <input
+                                type="text"
+                                placeholder="Where do you want to go?"
+                                id="destinationInput"
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="search-divider"></div>
+
+
+                    <div class="search-field">
+
+                        <span class="search-icon">◷</span>
+
+                        <div>
+                            <span class="search-label">
+                                Duration
+                            </span>
+
+                            <select id="durationSelect">
+
+                                <option value="">
+                                    How long?
+                                </option>
+
+                                <option value="3">
+                                    1–3 days
+                                </option>
+
+                                <option value="7">
+                                    4–7 days
+                                </option>
+
+                                <option value="14">
+                                    8–14 days
+                                </option>
+
+                                <option value="15">
+                                    15+ days
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="search-divider"></div>
+
+
+                    <div class="search-field">
+
+                        <span class="search-icon">◉</span>
+
+                        <div>
+
+                            <span class="search-label">
+                                Travel style
+                            </span>
+
+                            <select id="styleSelect">
+
+                                <option value="">
+                                    What do you love?
+                                </option>
+
+                                <option value="nature">
+                                    Nature
+                                </option>
+
+                                <option value="culture">
+                                    Culture
+                                </option>
+
+                                <option value="beach">
+                                    Beach
+                                </option>
+
+                                <option value="adventure">
+                                    Adventure
+                                </option>
+
+                                <option value="food">
+                                    Food & wine
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="search-button"
+                        id="searchButton"
+                    >
+                        →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- DESTINATIONS -->
+
+        <section class="section destinations">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            EXPLORE THE WORLD
+                        </p>
+
+                        <h2>
+                            Places worth
+                            <em>going to.</em>
+                        </h2>
+
+                    </div>
+
+
+                    <a
+                        href="destinations.html"
+                        class="text-link"
+                    >
+                        View all destinations →
+                    </a>
+
+                </div>
+
+
+                <div class="destination-grid">
+
+
+                    <a
+                        href="destination.html"
+                        class="destination-card destination-card--large"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=1200&q=85"
+                            alt="Italian coastline"
+                        >
+
+                        <div class="destination-card__content">
+
+                            <span>
+                                Europe
+                            </span>
+
+                            <h3>
+                                Italy
+                            </h3>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <a
+                        href="destination.html"
+                        class="destination-card"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=85"
+                            alt="Kyoto, Japan"
+                        >
+
+                        <div class="destination-card__content">
+
+                            <span>
+                                Asia
+                            </span>
+
+                            <h3>
+                                Japan
+                            </h3>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <a
+                        href="destination.html"
+                        class="destination-card"
+                    >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=85"
+                            alt="Iceland landscape"
+                        >
+
+                        <div class="destination-card__content">
+
+                            <span>
+                                Europe
+                            </span>
+
+                            <h3>
+                                Iceland
+                            </h3>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- JOURNEYS -->
+
+        <section class="section journeys">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            OUR JOURNEYS
+                        </p>
+
+                        <h2>
+                            Designed around
+                            <em>you.</em>
+                        </h2>
+
+                    </div>
+
+
+                    <a
+                        href="journeys.html"
+                        class="text-link"
+                    >
+                        Explore journeys →
+                    </a>
+
+                </div>
+
+
+                <div class="journey-grid">
+
+
+                    <article class="journey-card">
+
+                        <div class="journey-card__image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?auto=format&fit=crop&w=1000&q=85"
+                                alt="Amalfi Coast"
+                            >
+
+                            <span class="journey-tag">
+                                7 DAYS
+                            </span>
+
+                        </div>
+
+
+                        <div class="journey-card__content">
+
+                            <p>
+                                Italy · Mediterranean
+                            </p>
+
+                            <h3>
+                                The Amalfi Escape
+                            </h3>
+
+                            <div class="journey-card__bottom">
+
+                                <span>
+                                    From $1,290
+                                </span>
+
+                                <span class="arrow">
+                                    →
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="journey-card">
+
+                        <div class="journey-card__image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&w=1000&q=85"
+                                alt="Japan"
+                            >
+
+                            <span class="journey-tag">
+                                10 DAYS
+                            </span>
+
+                        </div>
+
+
+                        <div class="journey-card__content">
+
+                            <p>
+                                Japan · Culture
+                            </p>
+
+                            <h3>
+                                Ancient & Modern
+                            </h3>
+
+                            <div class="journey-card__bottom">
+
+                                <span>
+                                    From $2,190
+                                </span>
+
+                                <span class="arrow">
+                                    →
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="journey-card">
+
+                        <div class="journey-card__image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1504829857797-ddff29c27927?auto=format&fit=crop&w=1000&q=85"
+                                alt="Iceland"
+                            >
+
+                            <span class="journey-tag">
+                                6 DAYS
+                            </span>
+
+                        </div>
+
+
+                        <div class="journey-card__content">
+
+                            <p>
+                                Iceland · Adventure
+                            </p>
+
+                            <h3>
+                                Into the Wild
+                            </h3>
+
+                            <div class="journey-card__bottom">
+
+                                <span>
+                                    From $1,790
+                                </span>
+
+                                <span class="arrow">
+                                    →
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PERSONALIZED TRIP -->
+
+        <section class="plan-section">
+
+            <div class="container plan-section__inner">
+
+                <div class="plan-section__image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85"
+                        alt="Traveler looking at a landscape"
+                    >
+
+                </div>
+
+
+                <div class="plan-section__content">
+
+                    <p class="eyebrow">
+                        YOUR JOURNEY, YOUR WAY
+                    </p>
+
+                    <h2>
+                        Not sure where
+                        <em>to go?</em>
+                    </h2>
+
+                    <p>
+                        Tell us how you like to travel.
+                        We'll match you with places, experiences
+                        and journeys that fit your style.
+                    </p>
+
+
+                    <a
+                        href="plan.html"
+                        class="btn btn--dark"
+                    >
+                        Plan my trip
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- VALUES -->
+
+        <section class="section values">
+
+            <div class="container">
+
+                <div class="values-header">
+
+                    <p class="eyebrow">
+                        WHY NOMAD
+                    </p>
+
+                    <h2>
+                        Less planning.
+                        <em>More living.</em>
+                    </h2>
+
+                </div>
+
+
+                <div class="values-grid">
+
+                    <div class="value">
+
+                        <span class="value-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Thoughtfully curated
+                        </h3>
+
+                        <p>
+                            We choose places and experiences
+                            worth your time — not just the ones
+                            everyone already knows.
+                        </p>
+
+                    </div>
+
+
+                    <div class="value">
+
+                        <span class="value-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Built around you
+                        </h3>
+
+                        <p>
+                            Your travel style, pace and interests
+                            shape every recommendation.
+                        </p>
+
+                    </div>
+
+
+                    <div class="value">
+
+                        <span class="value-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Simple from start to finish
+                        </h3>
+
+                        <p>
+                            Discover, plan and book your journey
+                            without the endless tabs and spreadsheets.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CTA -->
+
+        <section class="cta">
+
+            <div class="cta__background"></div>
+
+            <div class="container cta__content">
+
+                <p class="eyebrow eyebrow--light">
+                    YOUR NEXT ADVENTURE
+                </p>
+
+                <h2>
+                    The world is waiting.
+                </h2>
+
+                <a
+                    href="plan.html"
+                    class="btn btn--light"
+                >
+                    Start exploring
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer__top">
+
+                <div>
+
+                    <a
+                        href="index.html"
+                        class="logo logo--footer"
+                    >
+                        NOMAD
+                    </a>
+
+                    <p>
+                        Travel with intention.
+                    </p>
+
+                </div>
+
+
+                <div class="footer__links">
+
+                    <div>
+
+                        <h4>
+                            Explore
+                        </h4>
+
+                        <a href="destinations.html">
+                            Destinations
+                        </a>
+
+                        <a href="journeys.html">
+                            Journeys
+                        </a>
+
+                        <a href="plan.html">
+                            Plan your trip
+                        </a>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            Company
+                        </h4>
+
+                        <a href="about.html">
+                            About
+                        </a>
+
+                        <a href="contact.html">
+                            Contact
+                        </a>
+
+                        <a href="#">
+                            Journal
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer__bottom">
+
+                <span>
+                    © 2026 NOMAD
+                </span>
+
+                <span>
+                    Made for curious travelers.
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
