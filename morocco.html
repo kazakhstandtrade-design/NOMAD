@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="NOMAD — Morocco. Places, experiences and routes."
+    >
+
+    <title>NOMAD — Morocco</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="morocco.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="header__inner">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            NOMAD
+        </a>
+
+
+        <nav class="navigation">
+
+            <a href="index.html">
+                Главная
+            </a>
+
+            <a
+                href="countries.html"
+                class="active"
+            >
+                Страны
+            </a>
+
+            <a href="routes.html">
+                Маршруты
+            </a>
+
+            <a href="contacts.html">
+                Контакты
+            </a>
+
+            <a href="about.html">
+                О нас
+            </a>
+
+            <a href="search.html">
+                Поиск
+            </a>
+
+        </nav>
+
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+    <nav
+        class="mobile-navigation"
+        id="mobileNavigation"
+    >
+
+        <a href="index.html">
+            Главная
+        </a>
+
+        <a href="countries.html">
+            Страны
+        </a>
+
+        <a href="routes.html">
+            Маршруты
+        </a>
+
+        <a href="contacts.html">
+            Контакты
+        </a>
+
+        <a href="about.html">
+            О нас
+        </a>
+
+        <a href="search.html">
+            Поиск
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="morocco-hero">
+
+
+    <div class="hero-background"></div>
+
+    <div class="hero-overlay"></div>
+
+
+    <div class="hero-content">
+
+        <div class="hero-location">
+            NORTH AFRICA
+        </div>
+
+
+        <h1>
+            MOROCCO
+        </h1>
+
+
+        <div class="hero-bottom">
+
+            <p>
+                Страна цвета, света и дорог,
+                которые невозможно пройти
+                только по карте.
+            </p>
+
+
+            <div class="hero-scroll">
+
+                <span></span>
+
+                SCROLL TO EXPLORE
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="intro">
+
+    <div class="intro__top">
+
+        <span>
+            MOROCCO / 01
+        </span>
+
+        <span>
+            31°37′N — 7°59′W
+        </span>
+
+    </div>
+
+
+    <div class="intro__content">
+
+        <p class="intro__small">
+            Not just a destination.
+        </p>
+
+
+        <h2>
+            A place where
+            <br>
+            every road
+            <br>
+            <em>feels different.</em>
+        </h2>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     THINGS TO DO
+===================================================== -->
+
+<section class="things">
+
+    <div class="section-header">
+
+        <div>
+
+            <span class="section-number">
+                01
+            </span>
+
+            <h2>
+                Things to do
+                <br>
+                in Morocco.
+            </h2>
+
+        </div>
+
+
+        <p>
+            Не самые очевидные места.
+            Не туристический список.
+            То, ради чего действительно
+            хочется приехать.
+        </p>
+
+    </div>
+
+
+
+    <div class="places-grid">
+
+
+        <!-- AGAFAY -->
+
+        <article
+            class="place-card"
+            data-title="Agafay Desert"
+            data-location="Near Marrakech"
+            data-description="Каменистая пустыня всего в нескольких часах от Марракеша. Здесь нет бесконечных песчаных дюн — вместо них лунные пейзажи, тишина и Атлас на горизонте."
+            data-image="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1800&q=90"
+        >
+
+            <div class="place-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=85"
+                    alt="Agafay Desert"
+                >
+
+            </div>
+
+
+            <div class="place-info">
+
+                <span>
+                    01
+                </span>
+
+                <h3>
+                    Agafay Desert
+                </h3>
+
+                <p>
+                    Silence outside Marrakech
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- AIT BEN HADDOU -->
+
+        <article
+            class="place-card"
+            data-title="Aït Benhaddou"
+            data-location="Ouarzazate"
+            data-description="Древний укреплённый ксар из глины на краю Сахары. Узкие проходы, глиняные стены и пейзажи, которые выглядят почти нереальными."
+            data-image="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1800&q=90"
+        >
+
+            <div class="place-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1200&q=85"
+                    alt="Ait Benhaddou"
+                >
+
+            </div>
+
+
+            <div class="place-info">
+
+                <span>
+                    02
+                </span>
+
+                <h3>
+                    Aït Benhaddou
+                </h3>
+
+                <p>
+                    Ancient clay architecture
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- CHEFCHAOUEN -->
+
+        <article
+            class="place-card"
+            data-title="Chefchaouen"
+            data-location="Rif Mountains"
+            data-description="Горный город, почти полностью окрашенный в оттенки синего. Лучший способ увидеть его — просто потеряться в маленьких улицах."
+            data-image="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1800&q=90"
+        >
+
+            <div class="place-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=85"
+                    alt="Chefchaouen"
+                >
+
+            </div>
+
+
+            <div class="place-info">
+
+                <span>
+                    03
+                </span>
+
+                <h3>
+                    Chefchaouen
+                </h3>
+
+                <p>
+                    The blue city
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- DADES -->
+
+        <article
+            class="place-card"
+            data-title="Dades Valley"
+            data-location="High Atlas"
+            data-description="Долина между скалами Высокого Атласа. Дорога здесь сама становится достопримечательностью — особенно на закате."
+            data-image="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1800&q=90"
+        >
+
+            <div class="place-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=85"
+                    alt="Dades Valley"
+                >
+
+            </div>
+
+
+            <div class="place-info">
+
+                <span>
+                    04
+                </span>
+
+                <h3>
+                    Dades Valley
+                </h3>
+
+                <p>
+                    Roads through the Atlas
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ESSAOUIRA -->
+
+        <article
+            class="place-card"
+            data-title="Essaouira"
+            data-location="Atlantic Coast"
+            data-description="Ветреный город на Атлантике с белыми стенами, рыбацкой гаванью и совершенно другим ритмом жизни."
+            data-image="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1800&q=90"
+        >
+
+            <div class="place-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=85"
+                    alt="Essaouira"
+                >
+
+            </div>
+
+
+            <div class="place-info">
+
+                <span>
+                    05
+                </span>
+
+                <h3>
+                    Essaouira
+                </h3>
+
+                <p>
+                    Atlantic, wind & slow days
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- TIZI N'TICHKA -->
+
+        <article
+            class="place-card"
+            data-title="Tizi n'Tichka"
+            data-location="High Atlas"
+            data-description="Один из самых впечатляющих горных перевалов Марокко. Серпантин соединяет Марракеш с южной частью страны."
+            data-image="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1800&q=90"
+        >
+
+            <div class="place-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=85"
+                    alt="Atlas Mountains"
+                >
+
+            </div>
+
+
+            <div class="place-info">
+
+                <span>
+                    06
+                </span>
+
+                <h3>
+                    Tizi n'Tichka
+                </h3>
+
+                <p>
+                    Across the Atlas
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PLACE MODAL
+===================================================== -->
+
+<div
+    class="place-modal"
+    id="placeModal"
+    aria-hidden="true"
+>
+
+    <div
+        class="modal-backdrop"
+        id="modalBackdrop"
+    ></div>
+
+
+    <div class="modal-window">
+
+        <button
+            class="modal-close"
+            id="modalClose"
+            aria-label="Закрыть"
+        >
+            ×
+        </button>
+
+
+        <div
+            class="modal-image"
+            id="modalImage"
+        ></div>
+
+
+        <div class="modal-content">
+
+            <span
+                class="modal-location"
+                id="modalLocation"
+            >
+            </span>
+
+
+            <h2 id="modalTitle">
+            </h2>
+
+
+            <p id="modalDescription">
+            </p>
+
+
+            <div class="modal-actions">
+
+                <button
+                    class="modal-route"
+                    id="addRoute"
+                >
+                    Добавить в мой маршрут
+                    <span>+</span>
+                </button>
+
+
+                <button
+                    class="modal-details"
+                    id="moreDetails"
+                >
+                    Узнать подробнее
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     BEST TIME
+===================================================== -->
+
+<section class="best-time">
+
+    <div class="best-time__visual">
+
+        <div class="best-time__image"></div>
+
+    </div>
+
+
+    <div class="best-time__content">
+
+        <span class="section-number">
+            02
+        </span>
+
+
+        <span class="eyebrow">
+            WHEN TO GO
+        </span>
+
+
+        <h2>
+            The best time
+            <br>
+            to visit
+            <br>
+            <em>Morocco.</em>
+        </h2>
+
+
+        <div class="season">
+
+            <div class="season-row">
+
+                <span>
+                    SPRING
+                </span>
+
+                <strong>
+                    MAR — MAY
+                </strong>
+
+            </div>
+
+
+            <div class="season-row active">
+
+                <span>
+                    AUTUMN
+                </span>
+
+                <strong>
+                    SEP — NOV
+                </strong>
+
+            </div>
+
+
+            <div class="season-row">
+
+                <span>
+                    WINTER
+                </span>
+
+                <strong>
+                    DEC — FEB
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <p class="best-time__description">
+
+            Весна и осень — самый комфортный период:
+            приятная температура, меньше экстремальной
+            жары и идеальные условия для путешествия
+            между городами, горами и пустыней.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     POPULAR ROUTES
+===================================================== -->
+
+<section class="routes">
+
+    <div class="routes__header">
+
+        <div>
+
+            <span class="section-number">
+                03
+            </span>
+
+            <h2>
+                Popular
+                <br>
+                routes.
+            </h2>
+
+        </div>
+
+
+        <p>
+            Не просто список мест.
+            Готовые путешествия,
+            собранные в один маршрут.
+        </p>
+
+    </div>
+
+
+
+    <div class="routes-list">
+
+
+        <article
+            class="route-card"
+            data-route="Marrakech → Agafay → Essaouira"
+        >
+
+            <div class="route-number">
+                01
+            </div>
+
+
+            <div class="route-main">
+
+                <span>
+                    5 DAYS
+                </span>
+
+                <h3>
+                    Marrakech
+                    <span>→</span>
+                    Atlantic
+                </h3>
+
+                <p>
+                    Marrakech · Agafay · Essaouira
+                </p>
+
+            </div>
+
+
+            <div class="route-arrow">
+                →
+            </div>
+
+        </article>
+
+
+
+        <article
+            class="route-card"
+            data-route="Marrakech → Atlas → Sahara"
+        >
+
+            <div class="route-number">
+                02
+            </div>
+
+
+            <div class="route-main">
+
+                <span>
+                    7 DAYS
+                </span>
+
+                <h3>
+                    Marrakech
+                    <span>→</span>
+                    Sahara
+                </h3>
+
+                <p>
+                    Marrakech · Atlas · Aït Benhaddou · Merzouga
+                </p>
+
+            </div>
+
+
+            <div class="route-arrow">
+                →
+            </div>
+
+        </article>
+
+
+
+        <article
+            class="route-card"
+            data-route="Tangier → Chefchaouen → Fes"
+        >
+
+            <div class="route-number">
+                03
+            </div>
+
+
+            <div class="route-main">
+
+                <span>
+                    6 DAYS
+                </span>
+
+                <h3>
+                    Blue
+                    <span>→</span>
+                    Imperial
+                </h3>
+
+                <p>
+                    Tangier · Chefchaouen · Fes
+                </p>
+
+            </div>
+
+
+            <div class="route-arrow">
+                →
+            </div>
+
+        </article>
+
+    </div>
+
+
+
+    <div class="routes-action">
+
+        <a
+            href="routes.html"
+            class="my-route-button"
+        >
+
+            Посмотреть мой маршрут
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL CTA
+===================================================== -->
+
+<section class="final">
+
+    <div class="final__background"></div>
+
+    <div class="final__overlay"></div>
+
+
+    <div class="final__content">
+
+        <span>
+            YOUR MOROCCO
+        </span>
+
+
+        <h2>
+            Don't just
+            <br>
+            visit.
+            <br>
+            <em>Get lost.</em>
+        </h2>
+
+
+        <a
+            href="plan.html"
+            class="final-button"
+        >
+
+            Создать путешествие
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="footer__top">
+
+        <div>
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                NOMAD
+            </a>
+
+            <p>
+                Travel differently.
+            </p>
+
+        </div>
+
+
+        <div class="footer__links">
+
+            <div>
+
+                <span>
+                    Navigation
+                </span>
+
+                <a href="index.html">
+                    Главная
+                </a>
+
+                <a href="countries.html">
+                    Страны
+                </a>
+
+                <a href="routes.html">
+                    Маршруты
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Company
+                </span>
+
+                <a href="about.html">
+                    О нас
+                </a>
+
+                <a href="contacts.html">
+                    Контакты
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer__bottom">
+
+        <span>
+            © 2026 NOMAD
+        </span>
+
+        <span>
+            Morocco
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<script src="morocco.js"></script>
+
+</body>
+
+</html>
