@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Iceland — Reykjavik, Golden Circle и South Coast."
+    >
+
+    <title>Iceland — NOMAD</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/iceland-route.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- PAGE TRANSITION -->
+
+    <div class="page-transition"></div>
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="container header__inner">
+
+            <a
+                href="index.html"
+                class="logo page-link"
+            >
+                NOMAD
+            </a>
+
+
+            <nav class="navigation">
+
+                <a
+                    href="index.html"
+                    class="navigation__link page-link"
+                >
+                    Главная
+                </a>
+
+                <a
+                    href="countries.html"
+                    class="navigation__link page-link"
+                >
+                    Страны
+                </a>
+
+                <a
+                    href="routes.html"
+                    class="navigation__link page-link"
+                >
+                    Маршруты
+                </a>
+
+                <a
+                    href="contacts.html"
+                    class="navigation__link page-link"
+                >
+                    Контакты
+                </a>
+
+            </nav>
+
+
+            <button
+                class="menu-button"
+                type="button"
+                aria-label="Открыть меню"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+
+        <div class="mobile-navigation">
+
+            <a href="index.html" class="page-link">
+                Главная
+            </a>
+
+            <a href="countries.html" class="page-link">
+                Страны
+            </a>
+
+            <a href="routes.html" class="page-link">
+                Маршруты
+            </a>
+
+            <a href="contacts.html" class="page-link">
+                Контакты
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- HERO -->
+
+        <section class="route-hero">
+
+            <div class="route-hero__image"></div>
+
+            <div class="route-hero__overlay"></div>
+
+
+            <div class="container route-hero__content">
+
+                <div class="route-hero__top">
+
+                    <span>
+                        Iceland
+                    </span>
+
+                    <span>
+                        03
+                    </span>
+
+                </div>
+
+
+                <div class="route-hero__bottom">
+
+                    <span class="route-hero__label">
+                        ROUTE
+                    </span>
+
+                    <h1>
+                        Reykjavik → Golden Circle → South Coast
+                    </h1>
+
+                    <div class="route-hero__meta">
+
+                        <span>
+                            3 days
+                        </span>
+
+                        <span>
+                            From
+                        </span>
+
+                        <strong>
+                            $1,790
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ROUTE -->
+
+        <section class="route-section">
+
+            <div class="container">
+
+                <div class="route-section__header">
+
+                    <div>
+
+                        <span class="section-label">
+                            ITINERARY
+                        </span>
+
+                        <h2>
+                            Iceland
+                        </h2>
+
+                    </div>
+
+
+                    <div class="route-days">
+
+                        <strong id="totalDays">
+                            3
+                        </strong>
+
+                        <span>
+                            DAYS
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EDIT MODE -->
+
+                <div
+                    class="edit-panel"
+                    id="editPanel"
+                >
+
+                    <div class="edit-panel__top">
+
+                        <div>
+
+                            <span class="section-label">
+                                EDIT ROUTE
+                            </span>
+
+                            <h3>
+                                Настройте маршрут
+                            </h3>
+
+                        </div>
+
+
+                        <button
+                            class="edit-close"
+                            id="editClose"
+                            type="button"
+                        >
+                            Готово
+                        </button>
+
+                    </div>
+
+
+                    <div class="add-place">
+
+                        <select id="placeSelect">
+
+                            <option value="">
+                                Выберите место
+                            </option>
+
+                        </select>
+
+
+                        <button
+                            id="addPlace"
+                            type="button"
+                        >
+                            Добавить
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TIMELINE -->
+
+                <div
+                    class="timeline"
+                    id="timeline"
+                >
+
+                    <!-- JS -->
+                    <!-- маршрут создаётся здесь -->
+
+                </div>
+
+
+
+                <!-- ACTIONS -->
+
+                <div class="route-actions">
+
+                    <button
+                        class="route-action route-action--light"
+                        id="editRoute"
+                        type="button"
+                    >
+                        Изменить маршрут
+                    </button>
+
+
+                    <button
+                        class="route-action route-action--dark"
+                        id="bookRoute"
+                        type="button"
+                    >
+                        Забронировать маршрут
+                        <span>
+                            →
+                        </span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PRICE -->
+
+        <section class="price-section">
+
+            <div class="container">
+
+                <div class="price-section__inner">
+
+                    <div>
+
+                        <span class="section-label">
+                            ESTIMATED COST
+                        </span>
+
+                        <h2>
+                            $1,790
+                        </h2>
+
+                    </div>
+
+
+                    <div class="price-list">
+
+                        <div>
+                            <span>
+                                Отели
+                            </span>
+
+                            <strong>
+                                $520
+                            </strong>
+                        </div>
+
+
+                        <div>
+                            <span>
+                                Транспорт
+                            </span>
+
+                            <strong>
+                                $430
+                            </strong>
+                        </div>
+
+
+                        <div>
+                            <span>
+                                Входные билеты
+                            </span>
+
+                            <strong>
+                                $160
+                            </strong>
+                        </div>
+
+
+                        <div>
+                            <span>
+                                Питание
+                            </span>
+
+                            <strong>
+                                $280
+                            </strong>
+                        </div>
+
+
+                        <div>
+                            <span>
+                                Прочее
+                            </span>
+
+                            <strong>
+                                $400
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container footer__inner">
+
+            <a
+                href="index.html"
+                class="logo page-link"
+            >
+                NOMAD
+            </a>
+
+            <span>
+                Travel differently.
+            </span>
+
+            <span>
+                © 2026 NOMAD
+            </span>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="js/iceland-route.js"></script>
+
+</body>
+
+</html>
