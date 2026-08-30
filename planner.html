@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="NOMAD — создание персонального маршрута."
+    >
+
+    <title>Plan your trip — NOMAD</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/planner.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="header__inner">
+
+        <a href="index.html" class="logo">
+            NOMAD
+        </a>
+
+        <nav class="navigation">
+
+            <a href="index.html">Главная</a>
+            <a href="countries.html">Страны</a>
+            <a href="routes.html">Маршруты</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="about.html">О нас</a>
+
+        </nav>
+
+        <button
+            class="menu-button"
+            type="button"
+            aria-label="Открыть меню"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+    <div class="mobile-navigation">
+
+        <a href="index.html">Главная</a>
+        <a href="countries.html">Страны</a>
+        <a href="routes.html">Маршруты</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="about.html">О нас</a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="planner-hero">
+
+        <div class="planner-hero__content">
+
+            <span class="eyebrow">
+                NOMAD PLANNER
+            </span>
+
+            <h1>
+                Build your<br>
+                own route.
+            </h1>
+
+            <p>
+                Выберите направление, расскажите о поездке,
+                а NOMAD соберёт удобный маршрут из того,
+                что действительно хочется увидеть.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="setup-section">
+
+        <div class="container">
+
+            <div class="section-intro">
+
+                <span class="section-number">
+                    01
+                </span>
+
+                <div>
+
+                    <span class="eyebrow dark">
+                        YOUR TRIP
+                    </span>
+
+                    <h2>
+                        Сначала расскажите<br>
+                        о путешествии.
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="trip-form">
+
+                <div class="form-group form-group--large">
+
+                    <label for="country">
+                        В какую страну едете?
+                    </label>
+
+                    <select id="country">
+
+                        <option value="">
+                            Выберите страну
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group form-group--large">
+
+                    <label for="city">
+                        В какой город прилетаете?
+                    </label>
+
+                    <select id="city" disabled>
+
+                        <option value="">
+                            Сначала выберите страну
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group form-group--large">
+
+                    <label for="district">
+                        В каком районе остановитесь?
+                    </label>
+
+                    <select id="district" disabled>
+
+                        <option value="">
+                            Сначала выберите город
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="arrival">
+                            Дата прилёта
+                        </label>
+
+                        <input
+                            type="date"
+                            id="arrival"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="departure">
+                            Дата вылета
+                        </label>
+
+                        <input
+                            type="date"
+                            id="departure"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="continue-button"
+                    id="startPlanning"
+                    type="button"
+                >
+                    Продолжить
+                    <span>→</span>
+                </button>
+
+
+                <p
+                    class="form-error"
+                    id="formError"
+                ></p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section
+        class="activities-section"
+        id="activitiesSection"
+    >
+
+        <div class="container">
+
+            <div class="activities-header">
+
+                <div>
+
+                    <span class="eyebrow dark">
+                        02 / NOMAD SUGGESTIONS
+                    </span>
+
+                    <h2>
+                        Предложения NOMAD
+                    </h2>
+
+                    <p class="activities-subtitle">
+                        Выбирайте всё, что хотите добавить
+                        в поездку. NOMAD сам разложит это
+                        по дням.
+                    </p>
+
+                </div>
+
+
+                <div class="trip-summary">
+
+                    <span id="summaryCountry">
+                        —
+                    </span>
+
+                    <span class="summary-divider">
+                        /
+                    </span>
+
+                    <span id="summaryCity">
+                        —
+                    </span>
+
+                    <span class="summary-divider">
+                        /
+                    </span>
+
+                    <span id="summaryDates">
+                        —
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="filters">
+
+                <button
+                    class="filter-button active"
+                    data-category="all"
+                    type="button"
+                >
+                    Все
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="sightseeing"
+                    type="button"
+                >
+                    Места
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="food"
+                    type="button"
+                >
+                    Еда
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="nature"
+                    type="button"
+                >
+                    Природа
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="activity"
+                    type="button"
+                >
+                    Активности
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="city"
+                    type="button"
+                >
+                    Города
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="shopping"
+                    type="button"
+                >
+                    Шопинг
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="nightlife"
+                    type="button"
+                >
+                    Ночная жизнь
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="hidden"
+                    type="button"
+                >
+                    Hidden gems
+                </button>
+
+            </div>
+
+
+            <div class="planner-tools">
+
+                <button
+                    class="manual-place-button"
+                    id="manualPlaceButton"
+                    type="button"
+                >
+                    <span>+</span>
+                    Добавить место
+                </button>
+
+                <div
+                    class="manual-place-form"
+                    id="manualPlaceForm"
+                >
+
+                    <input
+                        type="text"
+                        id="manualPlaceInput"
+                        placeholder="Введите название места"
+                    >
+
+                    <select id="manualPlaceCategory">
+
+                        <option value="sightseeing">
+                            Место
+                        </option>
+
+                        <option value="food">
+                            Еда
+                        </option>
+
+                        <option value="nature">
+                            Природа
+                        </option>
+
+                        <option value="activity">
+                            Активность
+                        </option>
+
+                        <option value="nightlife">
+                            Ночная жизнь
+                        </option>
+
+                        <option value="shopping">
+                            Шопинг
+                        </option>
+
+                    </select>
+
+                    <button
+                        id="addManualPlace"
+                        type="button"
+                    >
+                        Добавить
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="activities-layout">
+
+                <div
+                    class="activities-grid"
+                    id="activitiesGrid"
+                ></div>
+
+
+                <aside class="route-panel">
+
+                    <div class="route-panel__top">
+
+                        <div>
+
+                            <span class="eyebrow dark">
+                                YOUR ROUTE
+                            </span>
+
+                            <h3>
+                                Мой маршрут
+                            </h3>
+
+                        </div>
+
+                        <span
+                            class="route-count"
+                            id="routeCount"
+                        >
+                            0
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="route-info"
+                        id="routeInfo"
+                    >
+                        Выберите места, и они появятся
+                        в вашем маршруте.
+                    </div>
+
+
+                    <div
+                        class="route-days"
+                        id="routeDays"
+                    ></div>
+
+
+                    <div class="route-panel__bottom">
+
+                        <button
+                            class="optimize-button"
+                            id="optimizeButton"
+                            type="button"
+                        >
+                            Построить маршрут
+                        </button>
+
+                        <button
+                            class="save-route-button"
+                            id="saveRouteButton"
+                            type="button"
+                        >
+                            Сохранить маршрут
+                        </button>
+
+                        <button
+                            class="clear-button"
+                            id="clearButton"
+                            type="button"
+                        >
+                            Очистить маршрут
+                        </button>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section
+        class="ready-route-section"
+        id="readyRouteSection"
+    >
+
+        <div class="container">
+
+            <div class="ready-route-header">
+
+                <div>
+
+                    <span class="eyebrow dark">
+                        03 / YOUR JOURNEY
+                    </span>
+
+                    <h2>
+                        Готовый маршрут
+                    </h2>
+
+                    <p id="readyRouteDescription">
+                        —
+                    </p>
+
+                </div>
+
+                <button
+                    class="ready-save-button"
+                    id="readySaveButton"
+                    type="button"
+                >
+                    Сохранить маршрут
+                </button>
+
+            </div>
+
+
+            <div
+                class="ready-route-days"
+                id="readyRouteDays"
+            ></div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<div
+    class="mobile-route-bar"
+    id="mobileRouteBar"
+>
+
+    <div>
+
+        <span>
+            МОЙ МАРШРУТ
+        </span>
+
+        <strong id="mobileRouteCount">
+            0 мест
+        </strong>
+
+    </div>
+
+    <button
+        id="mobileRouteButton"
+        type="button"
+    >
+        Открыть
+    </button>
+
+</div>
+
+
+<div
+    class="route-modal"
+    id="routeModal"
+    aria-hidden="true"
+>
+
+    <div class="route-modal__overlay"></div>
+
+    <div class="route-modal__window">
+
+        <button
+            class="route-modal__close"
+            id="routeModalClose"
+            type="button"
+        >
+            ×
+        </button>
+
+        <div class="route-modal__header">
+
+            <span class="eyebrow dark">
+                YOUR JOURNEY
+            </span>
+
+            <h2>
+                Ваш маршрут
+            </h2>
+
+            <p id="modalRouteDescription">
+                —
+            </p>
+
+            <button
+                class="modal-save-button"
+                id="modalSaveButton"
+                type="button"
+            >
+                Сохранить маршрут
+            </button>
+
+        </div>
+
+
+        <div
+            class="modal-route-days"
+            id="modalRouteDays"
+        ></div>
+
+    </div>
+
+</div>
+
+
+<script src="js/planner.js"></script>
+
+</body>
+
+</html>
